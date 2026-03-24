@@ -1,0 +1,126 @@
+# AlpacApps-specific (always excluded)
+mistiq/
+jackie/
+rahulio/
+sundays/
+house/
+spirit-whisper-worker/
+alpaclaw/
+pai-discord/
+image-gen/
+PRODUCTDESIGN.md
+docs/CHANGELOG.md
+docs/MULTI_TENANCY_EFFORT_ASSESSMENT.md
+docs/DEMO_MODE_FEATURE_PLAN.md
+docs/MUSIC-ASSISTANT-EVALUATION.md
+docs/home-assistant-lighting-design.md
+docs/AWS_VS_DIGITALOCEAN_COMPARISON.md
+docs/OPENCLAW_SAFE_PARTITIONED.md
+docs/slack-alpaclaw-reinstall.md
+docs/music-assistant-api-mapping.md
+docs/sauna-hifi.html
+
+# Build artifacts
+package-lock.json
+styles/tailwind.out.css
+
+# Unselected features: SMS
+shared/sms-service.js
+
+# Unselected features: WhatsApp
+shared/whatsapp-service.js
+
+# Unselected features: Square
+shared/square-service.js
+
+# Unselected features: PayPal
+# (no files to exclude)
+
+# Unselected features: E-Signatures
+shared/signwell-service.js
+
+# Unselected features: Documents
+shared/lease-template-service.js
+shared/event-template-service.js
+shared/worktrade-template-service.js
+
+# Unselected features: Smart Home
+shared/services/lighting-data.js
+shared/services/camera-data.js
+shared/services/sonos-data.js
+shared/services/climate-data.js
+shared/services/laundry-data.js
+shared/services/oven-data.js
+residents/lighting.html
+residents/lighting.js
+residents/cameras.html
+residents/cameras.js
+residents/sonos.html
+residents/sonos.js
+residents/climate.html
+residents/climate.js
+residents/laundry.html
+residents/laundry.js
+residents/appliances.html
+residents/appliances.js
+blink-poller/
+camera-event-poller/
+lg-poller/
+
+# Unselected features: Maker Tools
+shared/services/printer-data.js
+shared/services/glowforge-data.js
+residents/3dprinter.html
+residents/3dprinter.js
+
+# Unselected features: Vehicles
+shared/services/cars-data.js
+residents/cars.html
+residents/cars.js
+auth/tesla/
+tesla-poller/
+
+# Unselected features: Property Ops
+shared/rental-service.js
+shared/event-service.js
+shared/hours-service.js
+shared/associate-shell.js
+spaces/apply/
+spaces/admin/rentals.html
+spaces/admin/rentals.js
+spaces/admin/events.html
+spaces/admin/events.js
+spaces/hostevent/
+events/
+associates/
+
+# Unselected features: Residents Portal
+shared/resident-shell.js
+shared/visitor-identity.js
+shared/demo-redact.js
+shared/instant-chrome.js
+shared/services/poll-manager.js
+shared/services/resident-device-scope.js
+residents/
+orientation/
+overnight/
+waiver/
+worktrade/
+visiting/
+visiting-1/
+community/
+directory/
+kioskhall/
+photos/
+mobile/
+
+# Unselected features: AI & Voice
+shared/pai-widget.js
+shared/chat-widget.js
+shared/voice-service.js
+residents/ask-pai.html
+residents/ask-pai.js
+pai/
+
+# Unselected features: Clauded
+clauded/
