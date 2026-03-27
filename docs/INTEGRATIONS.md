@@ -17,10 +17,12 @@ When building or modifying any feature that calls a paid API, instrument it to l
 - Edge functions: `send-email` (authenticated), `resend-inbound-webhook` (no JWT)
 - Free tier: 3,000 emails/month
 
-### Payments + ACH (Stripe) — Pending Setup
+### Payments (Stripe) — Active (Test Mode)
 - Config in `stripe_config` table
-- Edge function: `stripe-webhook` (deploy with `--no-verify-jwt`)
-- ACH: 0.8% capped at $5; Cards: 2.9% + 30c
+- Edge functions: `create-checkout` (authenticated), `stripe-webhook` (no JWT)
+- Webhook events: checkout.session.completed, payment_intent.succeeded, payment_intent.payment_failed
+- Default currency: PLN
+- Cards: 2.9% + 30c
 
 ### Google Sign-In — Pending Setup
 - Redirect URI: `https://wznrlttbpcfkrtierfjf.supabase.co/auth/v1/callback`
