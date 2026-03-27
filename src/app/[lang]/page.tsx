@@ -3,6 +3,7 @@ import type { Locale } from "@/i18n/config";
 import Link from "next/link";
 import { ScrollRevealInit } from "@/components/scroll-reveal";
 import { WaveDivider, WaveDividerAlt } from "@/components/wave-divider";
+import { EyeAnimation } from "@/components/eye-animation";
 
 function LotusIcon({ className = "" }: { className?: string }) {
   return (
@@ -151,6 +152,11 @@ export default async function HomePage({
       </section>
 
       <WaveDividerAlt from="#f5f0ea" to="#faf8f5" />
+
+      {/* ─── EYE ANIMATION (scroll-driven) ─── */}
+      <EyeAnimation />
+
+      <WaveDivider from="#faf8f5" to="#faf8f5" />
 
       {/* ─── CLASSES ─── */}
       <section className="py-24 sm:py-32 px-6 bg-background">
