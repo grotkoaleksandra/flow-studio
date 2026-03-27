@@ -16,10 +16,45 @@ export interface Dictionary {
       title: string;
       subtitle: string;
       cta: string;
+      scroll: string;
     };
     mission: {
       title: string;
       description: string;
+    };
+    philosophy: {
+      tagline: string;
+      title: string;
+      items: {
+        title: string;
+        description: string;
+        icon: string;
+      }[];
+    };
+    classes: {
+      tagline: string;
+      title: string;
+      items: {
+        name: string;
+        description: string;
+        duration: string;
+        level: string;
+      }[];
+    };
+    testimonials: {
+      tagline: string;
+      title: string;
+      items: {
+        quote: string;
+        name: string;
+        location: string;
+      }[];
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+      note: string;
     };
   };
   about: {

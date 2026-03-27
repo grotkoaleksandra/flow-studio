@@ -4,14 +4,28 @@ import { getVersion } from "@/lib/version";
 export function Footer({ dict }: { dict: Dictionary }) {
   const version = getVersion();
   return (
-    <footer className="border-t border-slate-200 py-8 px-6">
-      <div className="max-w-6xl mx-auto text-center text-sm text-slate-500">
-        <div>&copy; {new Date().getFullYear()} {dict.metadata.title}. {dict.footer.rights}</div>
-        {version !== "dev" && (
-          <div className="mt-2 text-xs text-slate-400" data-site-version>
-            {version}
+    <footer className="bg-charcoal text-white/60 py-16 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
+          <div>
+            <p className="text-xl font-light text-white/80 tracking-wide">
+              {dict.metadata.title}
+            </p>
+            <p className="text-sm mt-2 font-light">
+              Breathe &middot; Move &middot; Connect
+            </p>
           </div>
-        )}
+          <div className="text-center sm:text-right">
+            <p className="text-sm font-light">
+              &copy; {new Date().getFullYear()} {dict.metadata.title}. {dict.footer.rights}
+            </p>
+            {version !== "dev" && (
+              <p className="mt-2 text-xs text-white/30" data-site-version>
+                {version}
+              </p>
+            )}
+          </div>
+        </div>
       </div>
     </footer>
   );

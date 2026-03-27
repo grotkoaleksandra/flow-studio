@@ -8,8 +8,8 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "AlpacApps",
-  description: "Community management platform",
+  title: "Flow Studio — Yoga for Digital Nomads",
+  description: "Live online yoga classes for expats & digital nomads. Build routine and healthy habits anywhere in the world.",
 };
 
 export default function RootLayout({

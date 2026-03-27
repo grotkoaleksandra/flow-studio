@@ -6,20 +6,30 @@ import type { Dictionary } from "@/i18n/types";
 import { type Locale, INTRANET_LOCALES } from "@/i18n/config";
 import { LanguageSwitcher } from "./language-switcher";
 import { useAuth } from "@/contexts/auth-context";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { user, loading } = useAuth();
 
-  // Intranet only supports EN and BO - fall back to EN for other locales
   const intranetLang = INTRANET_LOCALES.includes(lang) ? lang : "en";
 
-  // Hide public navbar on intranet pages (intranet has its own header)
+  // Track scroll for navbar transparency
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   if (pathname.includes("/intranet")) {
     return null;
   }
+
+  // Check if we're on the home page (hero has dark bg)
+  const isHome = pathname === `/${lang}` || pathname === `/${lang}/`;
+  const isTransparent = isHome && !scrolled && !menuOpen;
 
   const links = [
     { href: `/${lang}`, label: dict.nav.home },
@@ -29,20 +39,37 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isTransparent
+          ? "bg-transparent border-transparent"
+          : "bg-white/90 backdrop-blur-md border-b border-sand shadow-sm"
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-        <Link href={`/${lang}`} className="text-xl font-bold">
+        <Link
+          href={`/${lang}`}
+          className={`text-xl font-light tracking-wide transition-colors duration-300 ${
+            isTransparent ? "text-white" : "text-charcoal"
+          }`}
+        >
           {dict.metadata.title}
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden sm:flex items-center gap-6">
+        <div className="hidden sm:flex items-center gap-8">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-amber-600 ${
-                pathname === link.href ? "text-amber-600" : "text-slate-700"
+              className={`text-sm font-light tracking-wide transition-colors duration-300 ${
+                isTransparent
+                  ? pathname === link.href
+                    ? "text-white"
+                    : "text-white/70 hover:text-white"
+                  : pathname === link.href
+                    ? "text-sage-dark"
+                    : "text-muted hover:text-charcoal"
               }`}
             >
               {link.label}
@@ -53,14 +80,22 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
             user ? (
               <Link
                 href={`/${intranetLang}/intranet`}
-                className="text-sm font-medium px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors"
+                className={`text-sm font-medium px-5 py-2 rounded-full transition-all duration-300 ${
+                  isTransparent
+                    ? "bg-white/15 border border-white/30 text-white hover:bg-white/25"
+                    : "bg-sage text-white hover:bg-sage-dark"
+                }`}
               >
                 {dict.nav.intranet}
               </Link>
             ) : (
               <Link
                 href={`/${intranetLang}/signin`}
-                className="text-sm font-medium px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors"
+                className={`text-sm font-medium px-5 py-2 rounded-full transition-all duration-300 ${
+                  isTransparent
+                    ? "bg-white/15 border border-white/30 text-white hover:bg-white/25"
+                    : "bg-sage text-white hover:bg-sage-dark"
+                }`}
               >
                 {dict.nav.signIn}
               </Link>
@@ -71,14 +106,14 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
         {/* Mobile toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="sm:hidden p-2 text-slate-700"
+          className={`sm:hidden p-2 transition-colors ${isTransparent ? "text-white" : "text-charcoal"}`}
           aria-label="Toggle menu"
         >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             {menuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 8h16M4 16h16" />
             )}
           </svg>
         </button>
@@ -86,14 +121,14 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="sm:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-3">
+        <div className="sm:hidden border-t border-sand bg-white/95 backdrop-blur-md px-6 py-6 space-y-4">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className={`block text-sm font-medium ${
-                pathname === link.href ? "text-amber-600" : "text-slate-700"
+              className={`block text-sm font-light tracking-wide ${
+                pathname === link.href ? "text-sage-dark" : "text-muted"
               }`}
             >
               {link.label}
@@ -108,7 +143,7 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
                 <Link
                   href={`/${intranetLang}/intranet`}
                   onClick={() => setMenuOpen(false)}
-                  className="block text-sm font-medium text-amber-600"
+                  className="block text-sm font-medium text-sage-dark"
                 >
                   {dict.nav.intranet}
                 </Link>
@@ -116,7 +151,7 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
                 <Link
                   href={`/${intranetLang}/signin`}
                   onClick={() => setMenuOpen(false)}
-                  className="block text-sm font-medium text-amber-600"
+                  className="block text-sm font-medium text-sage-dark"
                 >
                   {dict.nav.signIn}
                 </Link>

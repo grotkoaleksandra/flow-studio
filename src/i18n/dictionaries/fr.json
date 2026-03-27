@@ -1,65 +1,92 @@
 {
   "metadata": {
-    "title": "My Organization",
-    "description": "Community management platform"
+    "title": "Flow Studio",
+    "description": "Cours de yoga en ligne et en direct pour expatriés et nomades numériques — construisez votre routine et vos habitudes saines partout dans le monde."
   },
   "nav": {
-    "home": "Home",
-    "about": "About",
-    "programs": "Programs",
+    "home": "Accueil",
+    "about": "À propos",
+    "programs": "Cours",
     "contact": "Contact",
-    "signIn": "Sign In",
-    "intranet": "Intranet"
+    "signIn": "Connexion",
+    "intranet": "Tableau de bord"
   },
   "home": {
     "hero": {
-      "title": "Welcome",
-      "subtitle": "Building community, empowering futures",
-      "cta": "Learn More"
+      "title": "Trouvez Votre Flow,\nOù Que Vous Soyez",
+      "subtitle": "Yoga en ligne et en direct pour expatriés et nomades numériques. Créez votre routine, cultivez le calme et rejoignez une communauté mondiale — où que la vie vous mène.",
+      "cta": "Découvrir les Cours",
+      "scroll": "Défiler pour découvrir"
     },
     "mission": {
-      "title": "Our Mission",
-      "description": "We are dedicated to serving our community, supporting education, and strengthening bonds across generations."
+      "title": "Le Mouvement Est un Remède",
+      "description": "Nous croyons qu'une pratique régulière du yoga est le fondement d'une vie saine et équilibrée — surtout quand on est loin de chez soi. Flow Studio apporte la chaleur d'un studio de quartier sur votre écran, quel que soit votre fuseau horaire."
+    },
+    "philosophy": {
+      "tagline": "Respirez · Bougez · Connectez",
+      "title": "Pourquoi Flow Studio",
+      "items": [
+        { "title": "En Direct, Pas Enregistré", "description": "Chaque cours est donné en temps réel. Votre professeur vous voit, vous corrige et connaît votre prénom.", "icon": "video" },
+        { "title": "Flexible Selon les Fuseaux", "description": "Des cours de UTC+0 à UTC+12. Flow matinal à Bali, détente en soirée à Berlin — on s'adapte à vous.", "icon": "globe" },
+        { "title": "La Communauté d'Abord", "description": "Une tribu mondiale de pratiquants. Défis mensuels, pratiques en duo et moments conviviaux après les cours.", "icon": "heart" },
+        { "title": "Tous Niveaux Bienvenus", "description": "De votre premier chien tête en bas aux inversions avancées. Tous les corps, tous les niveaux, tous les jours.", "icon": "lotus" }
+      ]
+    },
+    "classes": {
+      "tagline": "Notre Pratique",
+      "title": "Des Cours pour Chaque Envie",
+      "items": [
+        { "name": "Vinyasa Flow", "description": "Mouvement dynamique lié au souffle qui développe force et souplesse. Attendez-vous à des enchaînements créatifs et une bonne dose de transpiration.", "duration": "60 min", "level": "Tous niveaux" },
+        { "name": "Slow Hatha", "description": "Postures tenues en pleine conscience qui approfondissent la perception du corps et bâtissent des bases solides. Idéal pour les débutants.", "duration": "75 min", "level": "Débutant" },
+        { "name": "Yin & Restore", "description": "Étirements profonds et prolongés qui libèrent les tensions des fascias et apaisent le système nerveux. Du pur bonheur.", "duration": "60 min", "level": "Tous niveaux" },
+        { "name": "Méditation Matinale", "description": "Respiration guidée et méditation pour commencer la journée centré. Pas besoin de tapis — venez comme vous êtes.", "duration": "30 min", "level": "Tous niveaux" }
+      ]
+    },
+    "testimonials": {
+      "tagline": "Paroles de la Communauté",
+      "title": "Ce Que Disent Nos Élèves",
+      "items": [
+        { "quote": "Flow Studio a rendu Lisbonne comme un chez-moi. Les cours du matin sont devenus mon point d'ancrage pendant que tout le reste était nouveau.", "name": "Sarah K.", "location": "Nomade numérique, actuellement à Lisbonne" },
+        { "quote": "J'ai essayé toutes les plateformes de yoga en ligne. C'est la seule où le professeur me connaît vraiment. C'est authentique.", "name": "Marco D.", "location": "Télétravailleur, Berlin" },
+        { "quote": "Les cours de yin sauvent mon dos après 10 heures devant l'ordinateur. Et la communauté ? Comme avoir des amis partout.", "name": "Yuki T.", "location": "Freelance, Chiang Mai" }
+      ]
+    },
+    "cta": {
+      "title": "Votre Tapis Vous Attend",
+      "description": "Rejoignez une communauté mondiale de pratiquants et commencez à construire la routine que votre corps réclame.",
+      "button": "Commencez Votre Parcours",
+      "note": "Premier cours gratuit · Sans engagement"
     }
   },
   "about": {
-    "title": "About Us",
-    "description": "Learn about our history, mission, and the community we serve.",
+    "title": "À Propos de Flow Studio",
+    "description": "Nous sommes une petite équipe de professeurs de yoga et de nomades numériques qui en avions assez d'une pratique irrégulière sur la route.",
     "history": {
-      "title": "Our History",
-      "content": "Our organization has a rich history of community service. We work to maintain traditions while embracing the future."
+      "title": "Notre Histoire",
+      "content": "Flow Studio est né d'un besoin simple : du yoga régulier et de qualité, peu importe où l'on se réveille dans le monde. Fondé par des instructeurs expatriés qui comprennent le mode de vie nomade, nous avons construit le studio dont nous rêvions — cours en direct, connexion authentique, horaires flexibles."
     }
   },
   "programs": {
-    "title": "Our Programs",
-    "description": "Explore the programs and initiatives we offer to our community.",
+    "title": "Nos Cours",
+    "description": "Des flows dynamisants le matin aux séances restauratives le soir, trouvez la pratique qui s'intègre à votre journée.",
     "list": [
-      {
-        "title": "Community Programs",
-        "description": "Programs dedicated to serving and strengthening our community."
-      },
-      {
-        "title": "Education",
-        "description": "Educational initiatives supporting youth and lifelong learning."
-      },
-      {
-        "title": "Community Support",
-        "description": "Resources and services that strengthen our community bonds."
-      }
+      { "title": "Vinyasa Flow", "description": "Mouvement dynamique synchronisé avec le souffle. Créez de la chaleur, développez la force, trouvez votre état de flow." },
+      { "title": "Slow Hatha", "description": "Pratique en pleine conscience axée sur l'alignement. Tenez, respirez, approfondissez — parfait pour construire des bases solides." },
+      { "title": "Yin & Restore", "description": "Postures passives prolongées ciblant les tissus conjonctifs profonds. L'antidote aux journées chargées." }
     ]
   },
   "contact": {
-    "title": "Contact Us",
-    "description": "Get in touch with us. We'd love to hear from you.",
+    "title": "Nous Contacter",
+    "description": "Des questions sur les cours, les tarifs ou les partenariats ? N'hésitez pas à nous écrire.",
     "form": {
-      "name": "Your Name",
-      "email": "Your Email",
-      "message": "Your Message",
-      "submit": "Send Message"
+      "name": "Votre Nom",
+      "email": "Votre Email",
+      "message": "Votre Message",
+      "submit": "Envoyer le Message"
     }
   },
   "footer": {
-    "rights": "All rights reserved.",
-    "language": "Language"
+    "rights": "Tous droits réservés.",
+    "language": "Langue"
   }
 }

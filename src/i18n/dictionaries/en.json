@@ -1,56 +1,140 @@
 {
   "metadata": {
-    "title": "My Organization",
-    "description": "Community management platform"
+    "title": "Flow Studio",
+    "description": "Live online yoga classes for expats & digital nomads — build routine and healthy habits anywhere in the world."
   },
   "nav": {
     "home": "Home",
     "about": "About",
-    "programs": "Programs",
+    "programs": "Classes",
     "contact": "Contact",
     "signIn": "Sign In",
-    "intranet": "Intranet"
+    "intranet": "Dashboard"
   },
   "home": {
     "hero": {
-      "title": "Welcome",
-      "subtitle": "Building community, empowering futures",
-      "cta": "Learn More"
+      "title": "Find Your Flow,\nAnywhere in the World",
+      "subtitle": "Live online yoga for expats & digital nomads. Build routine, cultivate calm, and connect with a global community — wherever life takes you.",
+      "cta": "Explore Classes",
+      "scroll": "Scroll to discover"
     },
     "mission": {
-      "title": "Our Mission",
-      "description": "We are dedicated to serving our community, supporting education, and strengthening bonds across generations."
+      "title": "Movement Is Medicine",
+      "description": "We believe that a consistent yoga practice is the foundation of a healthy, balanced life — especially when you're far from home. Flow Studio brings the warmth of a neighborhood studio to your screen, no matter which timezone you're in."
+    },
+    "philosophy": {
+      "tagline": "Breathe · Move · Connect",
+      "title": "Why Flow Studio",
+      "items": [
+        {
+          "title": "Live, Not Recorded",
+          "description": "Every class is taught in real-time. Your teacher sees you, corrects you, and knows your name.",
+          "icon": "video"
+        },
+        {
+          "title": "Timezone Flexible",
+          "description": "Classes across UTC+0 to UTC+12. Morning flow in Bali, evening unwind in Berlin — we've got you.",
+          "icon": "globe"
+        },
+        {
+          "title": "Community First",
+          "description": "A global tribe of movers. Monthly challenges, partner practices, and post-class hangouts.",
+          "icon": "heart"
+        },
+        {
+          "title": "All Levels Welcome",
+          "description": "From your first downward dog to advanced inversions. Every body, every level, every day.",
+          "icon": "lotus"
+        }
+      ]
+    },
+    "classes": {
+      "tagline": "Our Practice",
+      "title": "Classes for Every Mood",
+      "items": [
+        {
+          "name": "Vinyasa Flow",
+          "description": "Dynamic, breath-linked movement that builds strength and flexibility. Expect creative sequencing and a satisfying sweat.",
+          "duration": "60 min",
+          "level": "All levels"
+        },
+        {
+          "name": "Slow Hatha",
+          "description": "Grounding, mindful holds that deepen awareness and build a strong foundation. Perfect for beginners.",
+          "duration": "75 min",
+          "level": "Beginner"
+        },
+        {
+          "name": "Yin & Restore",
+          "description": "Deep, long-held stretches that release tension from fascia and calm the nervous system. Pure bliss.",
+          "duration": "60 min",
+          "level": "All levels"
+        },
+        {
+          "name": "Morning Meditation",
+          "description": "Guided breathwork and meditation to start your day centered. No mat needed — just show up.",
+          "duration": "30 min",
+          "level": "All levels"
+        }
+      ]
+    },
+    "testimonials": {
+      "tagline": "Community Voices",
+      "title": "From Our Students",
+      "items": [
+        {
+          "quote": "Flow Studio made Lisbon feel like home. The morning classes became my anchor while everything else was new.",
+          "name": "Sarah K.",
+          "location": "Digital nomad, currently Lisbon"
+        },
+        {
+          "quote": "I've tried every online yoga platform. This is the only one where the teacher actually knows me. It's real.",
+          "name": "Marco D.",
+          "location": "Remote worker, Berlin"
+        },
+        {
+          "quote": "The yin classes are saving my back from 10 hours of laptop work. And the community? Like having friends everywhere.",
+          "name": "Yuki T.",
+          "location": "Freelancer, Chiang Mai"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Your Mat Is Waiting",
+      "description": "Join a global community of movers and start building the routine your body has been asking for.",
+      "button": "Start Your Journey",
+      "note": "First class free · No commitment"
     }
   },
   "about": {
-    "title": "About Us",
-    "description": "Learn about our history, mission, and the community we serve.",
+    "title": "About Flow Studio",
+    "description": "We're a small team of yoga teachers and digital nomads who got tired of inconsistent practice on the road.",
     "history": {
-      "title": "Our History",
-      "content": "Our organization has a rich history of community service. We work to maintain traditions while embracing the future."
+      "title": "Our Story",
+      "content": "Flow Studio was born from a simple need: consistent, high-quality yoga no matter where in the world you wake up. Founded by expat instructors who understand the nomadic lifestyle, we built the studio we wished existed — live classes, real connection, flexible scheduling."
     }
   },
   "programs": {
-    "title": "Our Programs",
-    "description": "Explore the programs and initiatives we offer to our community.",
+    "title": "Our Classes",
+    "description": "From energizing morning flows to deep evening restoratives, find the practice that fits your day.",
     "list": [
       {
-        "title": "Community Programs",
-        "description": "Programs dedicated to serving and strengthening our community."
+        "title": "Vinyasa Flow",
+        "description": "Dynamic movement synced with breath. Build heat, build strength, find your flow state."
       },
       {
-        "title": "Education",
-        "description": "Educational initiatives supporting youth and lifelong learning."
+        "title": "Slow Hatha",
+        "description": "Mindful alignment-focused practice. Hold, breathe, deepen — perfect for building foundations."
       },
       {
-        "title": "Community Support",
-        "description": "Resources and services that strengthen our community bonds."
+        "title": "Yin & Restore",
+        "description": "Long-held passive poses targeting deep connective tissue. The antidote to busy days."
       }
     ]
   },
   "contact": {
-    "title": "Contact Us",
-    "description": "Get in touch with us. We'd love to hear from you.",
+    "title": "Get in Touch",
+    "description": "Questions about classes, pricing, or partnerships? We'd love to hear from you.",
     "form": {
       "name": "Your Name",
       "email": "Your Email",
