@@ -66,6 +66,42 @@ export function EyeAnimation() {
     // Phase 4: Reveal everything + subtle scale
     tl.to(revealCircle, { attr: { r: 950 }, duration: 2, ease: "power1.out" }, 9);
     tl.to(eyeSvg, { scale: 1.05, duration: 2, ease: "power1.inOut" }, 9);
+
+    // Lock page — hide content and clip scroll height until eye finishes
+    const pageContent = document.getElementById("page-content");
+    if (pageContent) {
+      pageContent.style.height = "0";
+      pageContent.style.overflow = "hidden";
+      pageContent.style.opacity = "0";
+
+      ScrollTrigger.create({
+        trigger: section,
+        start: "bottom bottom",
+        onEnter: () => {
+          // Unlock: expand content and fade in
+          pageContent.style.height = "";
+          pageContent.style.overflow = "";
+          gsap.to(pageContent, {
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.out",
+            onComplete: () => ScrollTrigger.refresh(),
+          });
+        },
+        onLeaveBack: () => {
+          // Re-lock if user scrolls back up
+          gsap.to(pageContent, {
+            opacity: 0,
+            duration: 0.3,
+            onComplete: () => {
+              pageContent.style.height = "0";
+              pageContent.style.overflow = "hidden";
+              ScrollTrigger.refresh();
+            },
+          });
+        },
+      });
+    }
   }
 
   function onScriptLoad() {
@@ -96,26 +132,17 @@ export function EyeAnimation() {
 
       {/* Full-screen scroll-locked eye section */}
       <div ref={sectionRef} className="relative z-20" style={{ height: "250vh" }}>
-        <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden bg-[#2d2926] grain">
+        <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden bg-[#2d2926] grain">
 
-          {/* Brand name above SVG */}
-          <div className="absolute top-[15%] left-0 right-0 text-center pointer-events-none z-10">
-            <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl lg:text-8xl font-light italic tracking-tight text-[#f0ede6]/80">
-              Syrena
-            </h1>
-            <p className="mt-3 text-[0.65rem] tracking-[0.35em] uppercase text-[#d4af7a]/60 font-[family-name:var(--font-body)] font-normal">
-              Holistic Wellness
-            </p>
-          </div>
-
-          {/* Eye SVG */}
-          <svg
-            id="eye-svg"
-            viewBox="0 0 1496 778"
-            preserveAspectRatio="xMidYMid meet"
-            className="w-[min(95vw,1200px)] h-auto translate-y-[8%]"
-            style={{ overflow: "visible" }}
-          >
+          {/* Eye SVG + brand in a vertical stack */}
+          <div className="flex flex-col items-center -mt-8">
+            <svg
+              id="eye-svg"
+              viewBox="0 0 1496 778"
+              preserveAspectRatio="xMidYMid meet"
+              className="w-[min(70vw,750px)] h-auto"
+              style={{ overflow: "visible" }}
+            >
             {/* Flat starting line (outside clip group) */}
             <line id="flat-line" x1="180" y1="545" x2="1310" y2="545" stroke="#d4af7a" strokeWidth="10" strokeLinecap="round" />
 
@@ -182,15 +209,26 @@ export function EyeAnimation() {
 
             </g>{/* end clip group */}
 
-          </svg>
+            </svg>
 
-          {/* Scroll indicator */}
-          <div id="scroll-indicator" className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-3 pointer-events-none">
-            <span className="text-xs tracking-[0.35em] uppercase text-[#d4af7a]/40 font-medium">
-              Scroll to awaken
+            {/* Brand name directly below eye */}
+            <div className="text-center mt-4">
+              <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-7xl lg:text-9xl font-light italic tracking-tight text-[#f0ede6]">
+                Syrena
+              </h1>
+              <p className="mt-3 text-[0.7rem] tracking-[0.4em] uppercase text-[#d4af7a]/50 font-[family-name:var(--font-body)] font-normal">
+                Holistic Wellness
+              </p>
+            </div>
+          </div>{/* end vertical stack */}
+
+          {/* Scroll indicator — absolute bottom of viewport */}
+          <div id="scroll-indicator" className="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-2 pointer-events-none">
+            <span className="text-[0.6rem] tracking-[0.3em] uppercase text-[#f0ede6]/20 font-[family-name:var(--font-body)]">
+              Scroll
             </span>
-            <div className="relative w-5 h-8 rounded-full border-2 border-[#d4af7a]/25">
-              <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-1 h-2 rounded-full bg-[#d4af7a]/40 animate-bounce" />
+            <div className="w-px h-8 bg-[#f0ede6]/15 relative overflow-hidden">
+              <div className="w-full h-3 bg-[#d4af7a]/40 animate-bounce" />
             </div>
           </div>
 

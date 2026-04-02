@@ -22,6 +22,9 @@ export default async function HomePage({
           ═══════════════════════════════════════════ */}
       <EyeAnimation />
 
+      {/* All content below is locked until eye animation completes */}
+      <div id="page-content" style={{ height: 0, overflow: "hidden", opacity: 0 }}>
+
       {/* ═══════════════════════════════════════════
           BRAND INTRO — first content after eye unlocks
           Dark section with large italic serif
@@ -313,6 +316,8 @@ export default async function HomePage({
           </div>
         </div>
       </footer>
+
+      </div>{/* end #page-content */}
     </>
   );
 }
