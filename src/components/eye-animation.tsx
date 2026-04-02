@@ -28,80 +28,47 @@ export function EyeAnimation() {
     initialized.current = true;
     gsap.registerPlugin(ScrollTrigger);
 
-    // Fade out scroll indicator
-    if (scrollIndicator) {
-      gsap.to(scrollIndicator, {
-        opacity: 0,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: "+=300",
-          scrub: true,
-        },
-      });
-    }
+    // Lock scroll while animation plays
+    document.body.style.overflow = "hidden";
 
+    const pageContent = document.getElementById("page-content");
+
+    // Auto-playing timeline (NOT scroll-driven)
     const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 1,
+      delay: 0.5,
+      onComplete: () => {
+        // Fade out scroll indicator after a beat
+        if (scrollIndicator) {
+          gsap.to(scrollIndicator, { opacity: 0, duration: 0.5, delay: 2 });
+        }
+        // Unlock scrolling
+        document.body.style.overflow = "";
+        // Reveal page content
+        if (pageContent) {
+          pageContent.style.height = "";
+          pageContent.style.overflow = "";
+          gsap.to(pageContent, {
+            opacity: 1, duration: 1, ease: "power2.out",
+          });
+        }
       },
     });
 
     // Phase 0: Flat line fades out
-    tl.to(flatLine, { opacity: 0, duration: 1.5, ease: "power1.in" }, 0);
+    tl.to(flatLine, { opacity: 0, duration: 0.8, ease: "power1.in" }, 0);
 
     // Phase 1: Reveal pupil + iris + full eye
-    tl.to(revealCircle, { attr: { r: 180 }, duration: 3, ease: "power2.inOut" }, 0);
+    tl.to(revealCircle, { attr: { r: 180 }, duration: 1.5, ease: "power2.inOut" }, 0);
 
     // Phase 2: Reveal arch + connected beams
-    tl.to(revealCircle, { attr: { r: 440 }, duration: 3, ease: "power2.out" }, 3);
+    tl.to(revealCircle, { attr: { r: 440 }, duration: 1.5, ease: "power2.out" }, 1.5);
 
     // Phase 3: Reveal separate outer beams
-    tl.to(revealCircle, { attr: { r: 700 }, duration: 3, ease: "power1.out" }, 6);
+    tl.to(revealCircle, { attr: { r: 700 }, duration: 1.2, ease: "power1.out" }, 3);
 
     // Phase 4: Reveal everything + subtle scale
-    tl.to(revealCircle, { attr: { r: 950 }, duration: 2, ease: "power1.out" }, 9);
-    tl.to(eyeSvg, { scale: 1.05, duration: 2, ease: "power1.inOut" }, 9);
-
-    // Lock page — hide content and clip scroll height until eye finishes
-    const pageContent = document.getElementById("page-content");
-    if (pageContent) {
-      pageContent.style.height = "0";
-      pageContent.style.overflow = "hidden";
-      pageContent.style.opacity = "0";
-
-      ScrollTrigger.create({
-        trigger: section,
-        start: "bottom bottom",
-        onEnter: () => {
-          // Unlock: expand content and fade in
-          pageContent.style.height = "";
-          pageContent.style.overflow = "";
-          gsap.to(pageContent, {
-            opacity: 1,
-            duration: 0.8,
-            ease: "power2.out",
-            onComplete: () => ScrollTrigger.refresh(),
-          });
-        },
-        onLeaveBack: () => {
-          // Re-lock if user scrolls back up
-          gsap.to(pageContent, {
-            opacity: 0,
-            duration: 0.3,
-            onComplete: () => {
-              pageContent.style.height = "0";
-              pageContent.style.overflow = "hidden";
-              ScrollTrigger.refresh();
-            },
-          });
-        },
-      });
-    }
+    tl.to(revealCircle, { attr: { r: 950 }, duration: 1, ease: "power1.out" }, 4.2);
+    tl.to(eyeSvg, { scale: 1.05, duration: 1.2, ease: "power1.inOut" }, 4.2);
   }
 
   function onScriptLoad() {
@@ -130,9 +97,8 @@ export function EyeAnimation() {
         onLoad={onScriptLoad}
       />
 
-      {/* Full-screen scroll-locked eye section */}
-      <div ref={sectionRef} className="relative z-20" style={{ height: "250vh" }}>
-        <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden bg-[#2d2926] grain">
+      {/* Full-screen eye hero — auto-plays, scroll locked until done */}
+      <div ref={sectionRef} className="relative z-20 h-screen flex flex-col items-center justify-center overflow-hidden bg-[#2d2926] grain">
 
           {/* Eye SVG + brand in a vertical stack */}
           <div className="flex flex-col items-center -mt-8">
@@ -232,7 +198,6 @@ export function EyeAnimation() {
             </div>
           </div>
 
-        </div>
       </div>
     </>
   );
