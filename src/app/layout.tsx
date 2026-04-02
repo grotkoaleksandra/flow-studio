@@ -8,8 +8,8 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Flow Studio — Yoga for Digital Nomads",
-  description: "Live online yoga classes for expats & digital nomads. Build routine and healthy habits anywhere in the world.",
+  title: "Syrena Holistic — Tarot, Yoga, Energy Healing & Breathwork",
+  description: "Holistic wellness — tarot readings, yoga, energy healing, breathwork, and sound baths to awaken your inner sight.",
 };
 
 export default function RootLayout({

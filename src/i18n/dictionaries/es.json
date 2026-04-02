@@ -1,83 +1,140 @@
 {
   "metadata": {
-    "title": "Flow Studio",
-    "description": "Clases de yoga en vivo y online para expatriados y nómadas digitales — crea tu rutina y hábitos saludables en cualquier lugar del mundo."
+    "title": "Syrena Holistic",
+    "description": "Bienestar holístico — lecturas de tarot, yoga, sanación energética, respiración consciente y baños de sonido para despertar tu visión interior."
   },
   "nav": {
     "home": "Inicio",
     "about": "Nosotros",
-    "programs": "Clases",
+    "programs": "Servicios",
     "contact": "Contacto",
     "signIn": "Iniciar Sesión",
     "intranet": "Panel"
   },
   "home": {
     "hero": {
-      "title": "Encuentra Tu Flow,\nEstés Donde Estés",
-      "subtitle": "Yoga en vivo y online para expatriados y nómadas digitales. Crea tu rutina, cultiva la calma y conecta con una comunidad global — donde sea que te lleve la vida.",
-      "cta": "Descubre las Clases",
-      "scroll": "Desliza para descubrir"
+      "title": "Despierta la Visión\nQue Vive en Ti",
+      "subtitle": "Lecturas de tarot, yoga, sanación energética, respiración consciente y baños de sonido — artes ancestrales entrelazadas para iluminar tu camino y restaurar tu plenitud.",
+      "cta": "Explora Nuestras Ofertas",
+      "scroll": "Desliza para despertar"
     },
     "mission": {
-      "title": "El Movimiento Es Medicina",
-      "description": "Creemos que una práctica de yoga constante es la base de una vida sana y equilibrada — especialmente cuando estás lejos de casa. Flow Studio lleva la calidez de un estudio de barrio a tu pantalla, sin importar en qué zona horaria te encuentres."
+      "title": "Aquí el Velo Es Delgado",
+      "description": "En Syrena Holistic creemos que la sanación comienza cuando cuerpo, mente y espíritu hablan el mismo idioma. A través de prácticas sagradas transmitidas durante siglos — desde el giro de las cartas hasta la vibración de los cuencos cantores — te guiamos de regreso al saber que ya vive dentro de ti."
     },
     "philosophy": {
-      "tagline": "Respira · Muévete · Conecta",
-      "title": "¿Por Qué Flow Studio?",
+      "tagline": "Ve · Sana · Transforma",
+      "title": "¿Por Qué Syrena?",
       "items": [
-        { "title": "En Vivo, No Grabado", "description": "Cada clase se imparte en tiempo real. Tu profesor te ve, te corrige y sabe tu nombre.", "icon": "video" },
-        { "title": "Flexible con Zonas Horarias", "description": "Clases de UTC+0 a UTC+12. Flow matutino en Bali, relajación nocturna en Berlín — te tenemos cubierto.", "icon": "globe" },
-        { "title": "Comunidad Ante Todo", "description": "Una tribu global de practicantes. Retos mensuales, prácticas en pareja y encuentros después de clase.", "icon": "heart" },
-        { "title": "Todos los Niveles", "description": "Desde tu primer perro boca abajo hasta inversiones avanzadas. Todos los cuerpos, todos los niveles, todos los días.", "icon": "lotus" }
+        {
+          "title": "Tarot y Adivinación",
+          "description": "Mira más allá del velo. Nuestras lecturas intuitivas iluminan patrones ocultos, guían decisiones y te reconectan con tu sabiduría más profunda.",
+          "icon": "lotus"
+        },
+        {
+          "title": "Sanación del Corazón",
+          "description": "Trabajo energético que disuelve bloqueos y restaura el flujo. Reiki, equilibrio de chakras y sanación con cristales para nutrir tu cuerpo sutil.",
+          "icon": "heart"
+        },
+        {
+          "title": "Lo Ancestral y lo Moderno",
+          "description": "Honramos tradiciones milenarias haciéndolas accesibles. Sesiones presenciales y virtuales diseñadas para encontrarte donde estés.",
+          "icon": "globe"
+        },
+        {
+          "title": "Rituales de Sonido y Respiración",
+          "description": "Cuencos cantores, respiración guiada y ceremonias vibracionales que silencian la mente y te sintonizan con tu propia frecuencia.",
+          "icon": "video"
+        }
       ]
     },
-    "classes": {
-      "tagline": "Nuestra Práctica",
-      "title": "Clases para Cada Momento",
+    "services": {
+      "tagline": "Nuestras Ofertas",
+      "title": "Servicios Sagrados",
       "items": [
-        { "name": "Vinyasa Flow", "description": "Movimiento dinámico coordinado con la respiración que desarrolla fuerza y flexibilidad. Espera secuencias creativas y una satisfactoria sudada.", "duration": "60 min", "level": "Todos los niveles" },
-        { "name": "Slow Hatha", "description": "Posturas firmes y conscientes que profundizan la atención y construyen una base sólida. Perfecto para principiantes.", "duration": "75 min", "level": "Principiante" },
-        { "name": "Yin & Restore", "description": "Estiramientos profundos y sostenidos que liberan la tensión de la fascia y calman el sistema nervioso. Pura relajación.", "duration": "60 min", "level": "Todos los niveles" },
-        { "name": "Meditación Matutina", "description": "Respiración guiada y meditación para empezar el día con centro. No necesitas esterilla — solo ven.", "duration": "30 min", "level": "Todos los niveles" }
+        {
+          "name": "Lecturas de Tarot",
+          "description": "Lecturas intuitivas de cartas que revelan verdades ocultas, iluminan encrucijadas y ofrecen guía desde lo invisible. Cada sesión es un diálogo sagrado entre tú y las cartas.",
+          "duration": "45–60 min",
+          "level": "Adivinación"
+        },
+        {
+          "name": "Yoga y Movimiento",
+          "description": "Movimiento consciente guiado por la respiración para enraizar el cuerpo y abrir canales energéticos. Desde hatha suave hasta vinyasa fluido, cada práctica es un acto de devoción.",
+          "duration": "60–75 min",
+          "level": "Movimiento"
+        },
+        {
+          "name": "Sanación Energética",
+          "description": "Reiki, equilibrio de chakras y terapia con cristales para liberar energía estancada y restaurar la armonía. Sal más ligero, más claro y profundamente nutrido.",
+          "duration": "60 min",
+          "level": "Sanación"
+        },
+        {
+          "name": "Baño de Sonido y Respiración",
+          "description": "Sumérgete en la resonancia de cuencos cantores, campanas y pranayama guiado. Un viaje vibracional que disuelve la tensión y te devuelve a la quietud.",
+          "duration": "60–90 min",
+          "level": "Ceremonia"
+        }
       ]
     },
     "testimonials": {
-      "tagline": "Voces de la Comunidad",
-      "title": "Lo Que Dicen Nuestros Alumnos",
+      "tagline": "Susurros del Círculo",
+      "title": "Lo Que Comparte Nuestra Comunidad",
       "items": [
-        { "quote": "Flow Studio hizo que Lisboa se sintiera como casa. Las clases matutinas se convirtieron en mi ancla mientras todo lo demás era nuevo.", "name": "Sarah K.", "location": "Nómada digital, actualmente en Lisboa" },
-        { "quote": "He probado todas las plataformas de yoga online. Esta es la única donde la profesora realmente me conoce. Es de verdad.", "name": "Marco D.", "location": "Trabajador remoto, Berlín" },
-        { "quote": "Las clases de yin están salvando mi espalda de 10 horas frente al portátil. ¿Y la comunidad? Como tener amigos en todas partes.", "name": "Yuki T.", "location": "Freelancer, Chiang Mai" }
+        {
+          "quote": "Mi lectura de tarot con Syrena fue como tener una conversación con mi propia alma. Cosas que había estado evitando de pronto tuvieron sentido, y me fui sintiéndome clara por primera vez en meses.",
+          "name": "Elena V.",
+          "location": "Cliente de Tarot y Sanación Energética"
+        },
+        {
+          "quote": "El baño de sonido fue trascendental. Podía sentir capas de estrés disolviéndose con cada vibración. Nunca había experimentado algo tan profundamente calmante.",
+          "name": "James R.",
+          "location": "Participante de Baño de Sonido y Respiración"
+        },
+        {
+          "quote": "Las clases de yoga de Syrena se sienten como un ritual, no solo un ejercicio. La intención y la energía que trae crean un espacio donde ocurre una transformación real.",
+          "name": "Amara L.",
+          "location": "Alumna de Yoga y Movimiento"
+        }
       ]
     },
     "cta": {
-      "title": "Tu Esterilla Te Espera",
-      "description": "Únete a una comunidad global de practicantes y empieza a crear la rutina que tu cuerpo te está pidiendo.",
-      "button": "Comienza Tu Camino",
-      "note": "Primera clase gratis · Sin compromiso"
+      "title": "Las Cartas Están Echadas. El Camino Te Espera.",
+      "description": "Adéntrate en tu sanación. Ya sea a través de la sabiduría del tarot, la quietud de la respiración o la calidez del trabajo energético — tu viaje interior comienza aquí.",
+      "button": "Reserva una Sesión",
+      "note": "Consulta gratuita · Sin compromiso"
     }
   },
   "about": {
-    "title": "Sobre Flow Studio",
-    "description": "Somos un pequeño equipo de profesores de yoga y nómadas digitales que nos cansamos de practicar sin constancia en la carretera.",
+    "title": "Sobre Syrena Holistic",
+    "description": "Somos practicantes, buscadores y guías — dedicados al arte de la sanación holística y los misterios que conectan a todos los seres vivos.",
     "history": {
       "title": "Nuestra Historia",
-      "content": "Flow Studio nació de una necesidad simple: yoga consistente y de calidad sin importar en qué lugar del mundo despiertes. Fundado por instructores expatriados que entienden el estilo de vida nómada, construimos el estudio que nos hubiera gustado encontrar — clases en vivo, conexión real, horarios flexibles."
+      "content": "Syrena Holistic nació de una vocación — un saber profundo de que la sabiduría ancestral y la vida moderna no son opuestos, sino compañeros. Arraigados en las tradiciones del tarot, la sanación energética, el yoga y las ceremonias de sonido, creamos un santuario donde lo místico es bienvenido y lo práctico es honrado. Cada ofrenda está diseñada para ayudarte a ver con más claridad, sentir con más profundidad y vivir con más plenitud."
     }
   },
   "programs": {
-    "title": "Nuestras Clases",
-    "description": "Desde flows energizantes por la mañana hasta restaurativos profundos por la noche, encuentra la práctica que encaje en tu día.",
+    "title": "Nuestros Servicios",
+    "description": "Desde lecturas intuitivas de tarot hasta baños de sonido transformadores, descubre las prácticas holísticas que hablan a tu espíritu.",
     "list": [
-      { "title": "Vinyasa Flow", "description": "Movimiento dinámico sincronizado con la respiración. Genera calor, desarrolla fuerza, encuentra tu estado de flow." },
-      { "title": "Slow Hatha", "description": "Práctica consciente centrada en la alineación. Sostén, respira, profundiza — ideal para construir bases sólidas." },
-      { "title": "Yin & Restore", "description": "Posturas pasivas sostenidas que trabajan el tejido conectivo profundo. El antídoto para los días intensos." }
+      {
+        "title": "Tarot y Adivinación",
+        "description": "Lecturas intuitivas que iluminan tu camino, revelan patrones ocultos y te reconectan con tu saber interior."
+      },
+      {
+        "title": "Yoga y Movimiento",
+        "description": "Práctica sagrada guiada por la respiración para enraizar el cuerpo, abrir el corazón y despertar la energía que fluye dentro de ti."
+      },
+      {
+        "title": "Sanación Energética",
+        "description": "Reiki, trabajo de chakras y terapia con cristales para disolver bloqueos, restaurar el equilibrio y nutrir el cuerpo sutil."
+      }
     ]
   },
   "contact": {
     "title": "Contáctanos",
-    "description": "¿Preguntas sobre clases, precios o colaboraciones? Nos encantaría saber de ti.",
+    "description": "¿Preguntas sobre nuestras ofertas, sesiones privadas o colaboraciones? Nos encantaría saber de ti.",
     "form": {
       "name": "Tu Nombre",
       "email": "Tu Email",

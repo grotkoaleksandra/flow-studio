@@ -31,7 +31,7 @@ export interface Dictionary {
         icon: string;
       }[];
     };
-    classes: {
+    services: {
       tagline: string;
       title: string;
       items: {
