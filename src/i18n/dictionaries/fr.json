@@ -1,83 +1,140 @@
 {
   "metadata": {
-    "title": "Flow Studio",
-    "description": "Cours de yoga en ligne et en direct pour expatriés et nomades numériques — construisez votre routine et vos habitudes saines partout dans le monde."
+    "title": "Syrena Holistic",
+    "description": "Bien-être holistique — lectures de tarot, yoga, guérison énergétique, travail du souffle et bains sonores pour éveiller votre vision intérieure."
   },
   "nav": {
     "home": "Accueil",
     "about": "À propos",
-    "programs": "Cours",
+    "programs": "Services",
     "contact": "Contact",
     "signIn": "Connexion",
     "intranet": "Tableau de bord"
   },
   "home": {
     "hero": {
-      "title": "Trouvez Votre Flow,\nOù Que Vous Soyez",
-      "subtitle": "Yoga en ligne et en direct pour expatriés et nomades numériques. Créez votre routine, cultivez le calme et rejoignez une communauté mondiale — où que la vie vous mène.",
-      "cta": "Découvrir les Cours",
-      "scroll": "Défiler pour découvrir"
+      "title": "Éveillez la Vision\nQui Vit en Vous",
+      "subtitle": "Lectures de tarot, yoga, guérison énergétique, travail du souffle et bains sonores — des arts ancestraux tissés ensemble pour illuminer votre chemin et restaurer votre plénitude.",
+      "cta": "Découvrir Nos Offrandes",
+      "scroll": "Défiler pour s'éveiller"
     },
     "mission": {
-      "title": "Le Mouvement Est un Remède",
-      "description": "Nous croyons qu'une pratique régulière du yoga est le fondement d'une vie saine et équilibrée — surtout quand on est loin de chez soi. Flow Studio apporte la chaleur d'un studio de quartier sur votre écran, quel que soit votre fuseau horaire."
+      "title": "Le Voile Est Mince Ici",
+      "description": "Chez Syrena Holistic, nous croyons que la guérison commence quand le corps, l'esprit et l'âme parlent le même langage. À travers des pratiques sacrées transmises au fil des siècles — du tirage des cartes à la vibration des bols chantants — nous vous guidons vers le savoir qui vit déjà en vous."
     },
     "philosophy": {
-      "tagline": "Respirez · Bougez · Connectez",
-      "title": "Pourquoi Flow Studio",
+      "tagline": "Voir · Guérir · Transformer",
+      "title": "Pourquoi Syrena",
       "items": [
-        { "title": "En Direct, Pas Enregistré", "description": "Chaque cours est donné en temps réel. Votre professeur vous voit, vous corrige et connaît votre prénom.", "icon": "video" },
-        { "title": "Flexible Selon les Fuseaux", "description": "Des cours de UTC+0 à UTC+12. Flow matinal à Bali, détente en soirée à Berlin — on s'adapte à vous.", "icon": "globe" },
-        { "title": "La Communauté d'Abord", "description": "Une tribu mondiale de pratiquants. Défis mensuels, pratiques en duo et moments conviviaux après les cours.", "icon": "heart" },
-        { "title": "Tous Niveaux Bienvenus", "description": "De votre premier chien tête en bas aux inversions avancées. Tous les corps, tous les niveaux, tous les jours.", "icon": "lotus" }
+        {
+          "title": "Tarot et Divination",
+          "description": "Regardez au-delà du voile. Nos lectures intuitives illuminent les schémas cachés, guident vos décisions et vous reconnectent à votre sagesse la plus profonde.",
+          "icon": "lotus"
+        },
+        {
+          "title": "Guérison du Cœur",
+          "description": "Un travail énergétique qui dissout les blocages et restaure le flux. Reiki, équilibrage des chakras et guérison par les cristaux pour nourrir votre corps subtil.",
+          "icon": "heart"
+        },
+        {
+          "title": "L'Ancien Rencontre le Moderne",
+          "description": "Nous honorons les traditions millénaires en les rendant accessibles. Séances en personne et virtuelles conçues pour vous rejoindre où que vous soyez.",
+          "icon": "globe"
+        },
+        {
+          "title": "Rituels de Son et de Souffle",
+          "description": "Bols chantants, travail du souffle guidé et cérémonies vibratoires qui apaisent l'esprit et vous accordent à votre propre fréquence.",
+          "icon": "video"
+        }
       ]
     },
-    "classes": {
-      "tagline": "Notre Pratique",
-      "title": "Des Cours pour Chaque Envie",
+    "services": {
+      "tagline": "Nos Offrandes",
+      "title": "Services Sacrés",
       "items": [
-        { "name": "Vinyasa Flow", "description": "Mouvement dynamique lié au souffle qui développe force et souplesse. Attendez-vous à des enchaînements créatifs et une bonne dose de transpiration.", "duration": "60 min", "level": "Tous niveaux" },
-        { "name": "Slow Hatha", "description": "Postures tenues en pleine conscience qui approfondissent la perception du corps et bâtissent des bases solides. Idéal pour les débutants.", "duration": "75 min", "level": "Débutant" },
-        { "name": "Yin & Restore", "description": "Étirements profonds et prolongés qui libèrent les tensions des fascias et apaisent le système nerveux. Du pur bonheur.", "duration": "60 min", "level": "Tous niveaux" },
-        { "name": "Méditation Matinale", "description": "Respiration guidée et méditation pour commencer la journée centré. Pas besoin de tapis — venez comme vous êtes.", "duration": "30 min", "level": "Tous niveaux" }
+        {
+          "name": "Lectures de Tarot",
+          "description": "Des lectures intuitives de cartes qui révèlent des vérités cachées, illuminent les carrefours et offrent des conseils de l'invisible. Chaque séance est un dialogue sacré entre vous et les cartes.",
+          "duration": "45–60 min",
+          "level": "Divination"
+        },
+        {
+          "name": "Yoga et Mouvement",
+          "description": "Mouvement conscient guidé par le souffle pour ancrer le corps et ouvrir les voies énergétiques. Du hatha doux au vinyasa fluide, chaque pratique est un acte de dévotion.",
+          "duration": "60–75 min",
+          "level": "Mouvement"
+        },
+        {
+          "name": "Guérison Énergétique",
+          "description": "Reiki, équilibrage des chakras et thérapie par les cristaux pour libérer l'énergie stagnante et restaurer l'harmonie. Ressortez plus léger, plus clair et profondément nourri.",
+          "duration": "60 min",
+          "level": "Guérison"
+        },
+        {
+          "name": "Bain Sonore et Travail du Souffle",
+          "description": "Plongez dans la résonance des bols chantants, des carillons et du pranayama guidé. Un voyage vibratoire qui dissout les tensions et vous ramène au silence intérieur.",
+          "duration": "60–90 min",
+          "level": "Cérémonie"
+        }
       ]
     },
     "testimonials": {
-      "tagline": "Paroles de la Communauté",
-      "title": "Ce Que Disent Nos Élèves",
+      "tagline": "Murmures du Cercle",
+      "title": "Ce Que Partage Notre Communauté",
       "items": [
-        { "quote": "Flow Studio a rendu Lisbonne comme un chez-moi. Les cours du matin sont devenus mon point d'ancrage pendant que tout le reste était nouveau.", "name": "Sarah K.", "location": "Nomade numérique, actuellement à Lisbonne" },
-        { "quote": "J'ai essayé toutes les plateformes de yoga en ligne. C'est la seule où le professeur me connaît vraiment. C'est authentique.", "name": "Marco D.", "location": "Télétravailleur, Berlin" },
-        { "quote": "Les cours de yin sauvent mon dos après 10 heures devant l'ordinateur. Et la communauté ? Comme avoir des amis partout.", "name": "Yuki T.", "location": "Freelance, Chiang Mai" }
+        {
+          "quote": "Ma lecture de tarot avec Syrena était comme une conversation avec ma propre âme. Des choses que j'évitais ont soudain pris sens, et je suis repartie en me sentant claire pour la première fois depuis des mois.",
+          "name": "Elena V.",
+          "location": "Cliente Tarot et Guérison Énergétique"
+        },
+        {
+          "quote": "Le bain sonore était transcendant. Je pouvais sentir des couches de stress se dissoudre à chaque vibration. Je n'ai jamais vécu quelque chose d'aussi profondément apaisant.",
+          "name": "James R.",
+          "location": "Participant Bain Sonore et Souffle"
+        },
+        {
+          "quote": "Les cours de yoga de Syrena ressemblent à un rituel, pas simplement à un entraînement. L'intention et l'énergie qu'elle apporte créent un espace où une vraie transformation se produit.",
+          "name": "Amara L.",
+          "location": "Élève Yoga et Mouvement"
+        }
       ]
     },
     "cta": {
-      "title": "Votre Tapis Vous Attend",
-      "description": "Rejoignez une communauté mondiale de pratiquants et commencez à construire la routine que votre corps réclame.",
-      "button": "Commencez Votre Parcours",
-      "note": "Premier cours gratuit · Sans engagement"
+      "title": "Les Cartes Sont Tirées. Le Chemin Vous Attend.",
+      "description": "Entrez dans votre guérison. Que ce soit par la sagesse du tarot, le silence du souffle ou la chaleur du travail énergétique — votre voyage intérieur commence ici.",
+      "button": "Réserver une Séance",
+      "note": "Consultation offerte · Sans engagement"
     }
   },
   "about": {
-    "title": "À Propos de Flow Studio",
-    "description": "Nous sommes une petite équipe de professeurs de yoga et de nomades numériques qui en avions assez d'une pratique irrégulière sur la route.",
+    "title": "À Propos de Syrena Holistic",
+    "description": "Nous sommes des praticiens, des chercheurs et des guides — dévoués à l'art de la guérison holistique et aux mystères qui relient tous les êtres vivants.",
     "history": {
       "title": "Notre Histoire",
-      "content": "Flow Studio est né d'un besoin simple : du yoga régulier et de qualité, peu importe où l'on se réveille dans le monde. Fondé par des instructeurs expatriés qui comprennent le mode de vie nomade, nous avons construit le studio dont nous rêvions — cours en direct, connexion authentique, horaires flexibles."
+      "content": "Syrena Holistic est né d'un appel — une conviction profonde que la sagesse ancestrale et la vie moderne ne sont pas des opposés, mais des partenaires. Enracinés dans les traditions du tarot, de la guérison énergétique, du yoga et des cérémonies sonores, nous avons créé un sanctuaire où le mystique est accueilli et le pratique est honoré. Chaque offrande est conçue pour vous aider à voir plus clairement, ressentir plus profondément et vivre plus pleinement."
     }
   },
   "programs": {
-    "title": "Nos Cours",
-    "description": "Des flows dynamisants le matin aux séances restauratives le soir, trouvez la pratique qui s'intègre à votre journée.",
+    "title": "Nos Services",
+    "description": "Des lectures intuitives de tarot aux bains sonores transformateurs, découvrez les pratiques holistiques qui parlent à votre esprit.",
     "list": [
-      { "title": "Vinyasa Flow", "description": "Mouvement dynamique synchronisé avec le souffle. Créez de la chaleur, développez la force, trouvez votre état de flow." },
-      { "title": "Slow Hatha", "description": "Pratique en pleine conscience axée sur l'alignement. Tenez, respirez, approfondissez — parfait pour construire des bases solides." },
-      { "title": "Yin & Restore", "description": "Postures passives prolongées ciblant les tissus conjonctifs profonds. L'antidote aux journées chargées." }
+      {
+        "title": "Tarot et Divination",
+        "description": "Des lectures intuitives qui illuminent votre chemin, révèlent les schémas cachés et vous reconnectent à votre savoir intérieur."
+      },
+      {
+        "title": "Yoga et Mouvement",
+        "description": "Pratique sacrée guidée par le souffle pour ancrer le corps, ouvrir le cœur et éveiller l'énergie qui coule en vous."
+      },
+      {
+        "title": "Guérison Énergétique",
+        "description": "Reiki, travail des chakras et thérapie par les cristaux pour dissoudre les blocages, restaurer l'équilibre et nourrir le corps subtil."
+      }
     ]
   },
   "contact": {
     "title": "Nous Contacter",
-    "description": "Des questions sur les cours, les tarifs ou les partenariats ? N'hésitez pas à nous écrire.",
+    "description": "Des questions sur nos offrandes, les séances privées ou les collaborations ? N'hésitez pas à nous écrire.",
     "form": {
       "name": "Votre Nom",
       "email": "Votre Email",

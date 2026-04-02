@@ -50,7 +50,7 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
         <Link
           href={`/${lang}`}
           className={`text-xl font-light tracking-wide transition-colors duration-300 ${
-            isTransparent ? "text-white" : "text-charcoal"
+            isTransparent ? "text-[#0A36C2]/60" : "text-charcoal"
           }`}
         >
           {dict.metadata.title}
@@ -65,8 +65,8 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
               className={`text-sm font-light tracking-wide transition-colors duration-300 ${
                 isTransparent
                   ? pathname === link.href
-                    ? "text-white"
-                    : "text-white/70 hover:text-white"
+                    ? "text-[#0A36C2]/70"
+                    : "text-[#0A36C2]/40 hover:text-[#0A36C2]/70"
                   : pathname === link.href
                     ? "text-sage-dark"
                     : "text-muted hover:text-charcoal"
@@ -82,7 +82,7 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
                 href={`/${intranetLang}/intranet`}
                 className={`text-sm font-medium px-5 py-2 rounded-full transition-all duration-300 ${
                   isTransparent
-                    ? "bg-white/15 border border-white/30 text-white hover:bg-white/25"
+                    ? "bg-[#0A36C2]/10 border border-[#0A36C2]/20 text-[#0A36C2] hover:bg-[#0A36C2]/20"
                     : "bg-sage text-white hover:bg-sage-dark"
                 }`}
               >
@@ -93,7 +93,7 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
                 href={`/${intranetLang}/signin`}
                 className={`text-sm font-medium px-5 py-2 rounded-full transition-all duration-300 ${
                   isTransparent
-                    ? "bg-white/15 border border-white/30 text-white hover:bg-white/25"
+                    ? "bg-[#0A36C2]/10 border border-[#0A36C2]/20 text-[#0A36C2] hover:bg-[#0A36C2]/20"
                     : "bg-sage text-white hover:bg-sage-dark"
                 }`}
               >
