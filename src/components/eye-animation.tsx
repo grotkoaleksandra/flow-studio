@@ -38,6 +38,9 @@ export function EyeAnimation() {
       });
     }
 
+    // Track whether content has been unlocked
+    let unlocked = false;
+
     // Scroll-driven eye reveal timeline
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -45,22 +48,27 @@ export function EyeAnimation() {
         start: "top top",
         end: "bottom bottom",
         scrub: 1,
-        onLeave: () => {
-          // Animation done — unlock page content
-          if (pageContent) {
+        pin: true,
+        onUpdate: (self: { progress: number }) => {
+          // Unlock content when animation is nearly complete
+          if (self.progress > 0.95 && !unlocked && pageContent) {
+            unlocked = true;
             pageContent.style.height = "";
             pageContent.style.overflow = "";
-            gsap.to(pageContent, { opacity: 1, duration: 0.8, ease: "power2.out" });
+            gsap.to(pageContent, {
+              opacity: 1, duration: 0.8, ease: "power2.out",
+              onComplete: () => ScrollTrigger.refresh(),
+            });
           }
-        },
-        onEnterBack: () => {
-          // Re-lock if user scrolls back up into animation
-          if (pageContent) {
+          // Re-lock if user scrolls back
+          if (self.progress < 0.9 && unlocked && pageContent) {
+            unlocked = false;
             gsap.to(pageContent, {
               opacity: 0, duration: 0.3,
               onComplete: () => {
                 pageContent.style.height = "0";
                 pageContent.style.overflow = "hidden";
+                ScrollTrigger.refresh();
               },
             });
           }
