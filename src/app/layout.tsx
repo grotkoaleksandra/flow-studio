@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import "./globals.css";
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist",
-});
-
 export const metadata: Metadata = {
-  title: "Syrena Holistic — Tarot, Yoga, Energy Healing & Breathwork",
-  description: "Holistic wellness — tarot readings, yoga, energy healing, breathwork, and sound baths to awaken your inner sight.",
+  title: "Syrena Holistic — Yoga, Tarot & Sacred Wellness",
+  description: "A sanctuary for yoga, tarot readings, energy healing, breathwork, and sound ceremonies. Ancient arts woven together to illuminate your path.",
 };
 
 export default function RootLayout({
@@ -18,11 +12,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en">
       <head>
-        {/* Add Google Fonts here if your locales need non-Latin scripts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body className="min-h-screen flex flex-col antialiased bg-background text-foreground">
+      <body className="min-h-screen antialiased">
         {children}
       </body>
     </html>

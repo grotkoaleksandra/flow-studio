@@ -196,7 +196,7 @@ export function ScrollRevealInit() {
       {/* Scroll progress bar */}
       <div data-scroll-progress="" style={{
         position: "fixed", top: 0, left: 0, right: 0, height: 2, zIndex: 100,
-        background: "linear-gradient(90deg, var(--sage, #8a9a7b), var(--warm, #c4956a))",
+        background: "linear-gradient(90deg, #b85c3a, #d4af7a)",
         transformOrigin: "left", transform: "scaleX(0)",
       }} />
     </>
