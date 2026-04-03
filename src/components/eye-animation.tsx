@@ -120,10 +120,25 @@ export function EyeAnimation() {
 
       {/* Full-screen eye hero — scroll-driven, content locked until done */}
       <div ref={sectionRef} className="relative z-20" style={{ height: "300vh" }}>
-        <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden bg-[#2d2926] grain">
+        <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden bg-[#2d2926]">
+          {/* Ocean waves background */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1920&q=80"
+              alt=""
+              className="w-full h-full object-cover opacity-25"
+            />
+            <div className="absolute inset-0 bg-[#2d2926]/60" />
+          </div>
+          {/* Grain on top of image */}
+          <div className="absolute inset-0 z-[1] pointer-events-none opacity-[0.035]" style={{
+            backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+            backgroundRepeat: "repeat",
+            backgroundSize: "256px 256px",
+          }} />
 
           {/* Eye SVG + brand in a vertical stack */}
-          <div className="flex flex-col items-center -mt-8">
+          <div className="relative z-[3] flex flex-col items-center -mt-8">
             <svg
               id="eye-svg"
               viewBox="0 0 1496 778"
@@ -211,7 +226,7 @@ export function EyeAnimation() {
           </div>{/* end vertical stack */}
 
           {/* Scroll indicator — absolute bottom of viewport */}
-          <div id="scroll-indicator" className="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-2 pointer-events-none">
+          <div id="scroll-indicator" className="absolute bottom-6 left-0 right-0 z-[3] flex flex-col items-center gap-2 pointer-events-none">
             <span className="text-[0.6rem] tracking-[0.3em] uppercase text-[#f0ede6]/20 font-[family-name:var(--font-body)]">
               Scroll
             </span>
