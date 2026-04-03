@@ -48,7 +48,6 @@ export function EyeAnimation() {
         start: "top top",
         end: "bottom bottom",
         scrub: 1,
-        pin: true,
         onUpdate: (self: { progress: number }) => {
           // Unlock content when animation is nearly complete
           if (self.progress > 0.95 && !unlocked && pageContent) {
