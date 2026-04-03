@@ -146,10 +146,12 @@ export default async function HomePage({
 
             {/* Image placeholder right — offset */}
             <div data-reveal="up" data-reveal-delay="0.2" className="relative md:translate-y-12">
-              <div className="aspect-[3/4] bg-[#1e1916] flex items-center justify-center">
-                <span className="font-[family-name:var(--font-display)] text-lg italic text-[#f0ede6]/15">
-                  [ image ]
-                </span>
+              <div className="aspect-[3/4] bg-[#1e1916] flex items-center justify-center overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80"
+                  alt="Meditation and wellness"
+                  className="w-full h-full object-cover opacity-70"
+                />
               </div>
             </div>
           </div>
