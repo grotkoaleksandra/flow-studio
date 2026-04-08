@@ -17,7 +17,7 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
   const intranetLang = INTRANET_LOCALES.includes(lang) ? lang : "en";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 2);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
