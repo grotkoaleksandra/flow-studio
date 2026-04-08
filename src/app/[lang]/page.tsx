@@ -156,7 +156,7 @@ export default async function HomePage({
                 className="group py-10 md:px-8 first:md:pl-0 last:md:pr-0 border-b md:border-b-0 md:border-r last:border-r-0 border-[#2d2926]/10 transition-all duration-500"
               >
                 <p className="label text-[#2d2926]/40 mb-4">{svc.level}</p>
-                <h3 className="font-[family-name:var(--font-display)] text-2xl font-light italic text-[#2d2926] mb-3">
+                <h3 className="font-[family-name:var(--font-display)] text-2xl font-normal text-[#2d2926] mb-3">
                   {svc.name}
                 </h3>
                 <p className="text-sm text-[#2d2926]/50 leading-relaxed font-light mb-6 max-w-[280px]">
@@ -278,7 +278,7 @@ export default async function HomePage({
               >
                 <div className="flex items-baseline gap-6 sm:gap-10">
                   <span className="label text-[#2d2926]/35 w-24 shrink-0">{cls.day}</span>
-                  <span className="font-[family-name:var(--font-display)] text-lg sm:text-xl font-light italic text-[#2d2926] group-hover:text-[#b85c3a] transition-colors duration-300">
+                  <span className="text-base sm:text-lg font-normal text-[#2d2926] group-hover:text-[#b85c3a] transition-colors duration-300">
                     {cls.name}
                   </span>
                 </div>
