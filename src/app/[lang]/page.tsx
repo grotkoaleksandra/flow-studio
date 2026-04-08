@@ -5,34 +5,26 @@ import { ScrollRevealInit } from "@/components/scroll-reveal";
 import { EyeAnimation } from "@/components/eye-animation";
 
 /* ── Lace ornament — intricate scrollwork accent ── */
-function LaceOrnament({ color = "#d4af7a", className = "" }: { color?: string; className?: string }) {
+function LaceOrnament({ color = "#b85c3a", className = "" }: { color?: string; className?: string }) {
   return (
     <svg className={`w-48 sm:w-64 h-auto ${className}`} viewBox="0 0 260 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Center lotus/flower */}
       <path d="M130 10 Q135 20 130 32 Q125 20 130 10Z" fill={color} opacity="0.25" />
       <path d="M130 10 Q140 18 140 28 Q135 22 130 32 Q133 18 130 10Z" fill={color} opacity="0.15" />
       <path d="M130 10 Q120 18 120 28 Q125 22 130 32 Q127 18 130 10Z" fill={color} opacity="0.15" />
       <path d="M130 32 Q137 28 143 32 Q137 36 130 32Z" fill={color} opacity="0.2" />
       <path d="M130 32 Q123 28 117 32 Q123 36 130 32Z" fill={color} opacity="0.2" />
       <circle cx="130" cy="22" r="1.5" fill={color} opacity="0.35" />
-
-      {/* Left scrollwork */}
       <path d="M115 25 C108 15, 95 12, 88 20 C82 27, 88 34, 95 30" stroke={color} strokeWidth="0.7" opacity="0.3" fill="none" />
       <path d="M95 30 C100 27, 98 22, 92 24" stroke={color} strokeWidth="0.5" opacity="0.2" fill="none" />
       <path d="M88 20 C82 14, 70 14, 65 22 C60 30, 68 34, 74 28" stroke={color} strokeWidth="0.6" opacity="0.2" fill="none" />
       <path d="M74 28 C78 25, 76 20, 70 23" stroke={color} strokeWidth="0.4" opacity="0.15" fill="none" />
-      {/* Leaf accents */}
       <path d="M100 22 Q95 18 90 22 Q95 26 100 22Z" fill={color} opacity="0.12" />
       <path d="M78 22 Q73 19 68 22 Q73 25 78 22Z" fill={color} opacity="0.08" />
-      {/* Dots */}
       <circle cx="105" cy="28" r="1" fill={color} opacity="0.2" />
       <circle cx="82" cy="26" r="0.8" fill={color} opacity="0.15" />
-      {/* Trailing vine */}
       <path d="M65 22 C58 18, 48 22, 42 20" stroke={color} strokeWidth="0.4" opacity="0.12" fill="none" />
       <path d="M42 20 C36 18, 28 22, 22 21" stroke={color} strokeWidth="0.3" opacity="0.08" fill="none" strokeDasharray="3 4" />
       <circle cx="60" cy="21" r="0.6" fill={color} opacity="0.1" />
-
-      {/* Right scrollwork — mirror */}
       <path d="M145 25 C152 15, 165 12, 172 20 C178 27, 172 34, 165 30" stroke={color} strokeWidth="0.7" opacity="0.3" fill="none" />
       <path d="M165 30 C160 27, 162 22, 168 24" stroke={color} strokeWidth="0.5" opacity="0.2" fill="none" />
       <path d="M172 20 C178 14, 190 14, 195 22 C200 30, 192 34, 186 28" stroke={color} strokeWidth="0.6" opacity="0.2" fill="none" />
@@ -62,7 +54,7 @@ export default async function HomePage({
       <ScrollRevealInit />
 
       {/* ═══════════════════════════════════════════
-          EYE HERO — scroll-driven reveal on dark bg
+          EYE HERO — scroll-driven reveal on parchment
           ═══════════════════════════════════════════ */}
       <EyeAnimation />
 
@@ -70,21 +62,21 @@ export default async function HomePage({
       <div id="page-content" style={{ height: 0, overflow: "hidden", opacity: 0 }}>
 
       {/* ═══════════════════════════════════════════
-          BRAND INTRO — first content after eye unlocks
+          BRAND INTRO — flows from parchment hero
           ═══════════════════════════════════════════ */}
-      <section className="relative py-32 sm:py-44 px-6 bg-[#2d2926] grain">
+      <section className="relative py-32 sm:py-44 px-6 bg-[#f0ede6]">
         <div className="max-w-[900px] mx-auto text-center">
-          <LaceOrnament className="mx-auto mb-10 opacity-60" />
-          <p data-reveal="up" className="label text-[#d4af7a]/60 mb-8">
+          <LaceOrnament className="mx-auto mb-10 opacity-50" />
+          <p data-reveal="up" className="label text-[#b85c3a]/70 mb-8">
             {dict.home.hero.scroll}
           </p>
           <h1
             data-text-reveal=""
-            className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl font-light italic leading-[1.1] tracking-tight text-[#f0ede6] whitespace-pre-line mb-10"
+            className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl font-light italic leading-[1.1] tracking-tight text-[#2d2926] whitespace-pre-line mb-10"
           >
             {dict.home.hero.title}
           </h1>
-          <p data-reveal="up" data-reveal-delay="0.2" className="text-base sm:text-lg text-[#f0ede6]/50 max-w-xl mx-auto mb-14 leading-relaxed font-light">
+          <p data-reveal="up" data-reveal-delay="0.2" className="text-base sm:text-lg text-[#2d2926]/50 max-w-xl mx-auto mb-14 leading-relaxed">
             {dict.home.hero.subtitle}
           </p>
           <div data-reveal="scale" data-reveal-delay="0.4">
@@ -99,35 +91,30 @@ export default async function HomePage({
       </section>
 
       {/* ═══════════════════════════════════════════
-          PHILOSOPHY — dark bg, pull quote + paragraph
+          PHILOSOPHY — sage-tinted bg, pull quote
           ═══════════════════════════════════════════ */}
-      <section className="relative py-28 sm:py-40 px-6 bg-[#1e1916] grain">
+      <section className="relative py-28 sm:py-40 px-6 bg-[#2d2926] grain">
         <div className="max-w-[1100px] mx-auto">
           <div className="grid md:grid-cols-[1fr_1px_1fr] gap-12 md:gap-16 items-start">
-            {/* Pull quote */}
             <div data-reveal="up">
               <p className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl lg:text-4xl font-light italic leading-[1.35] text-[#f0ede6]/90">
                 &ldquo;{dict.home.mission.title}&rdquo;
               </p>
             </div>
-
-            {/* Thin vertical rule — hidden on mobile */}
             <div className="hidden md:block w-px bg-[#f0ede6]/10 self-stretch" />
-
-            {/* Description */}
             <div data-reveal="up" data-reveal-delay="0.2" className="flex flex-col justify-center">
               <hr className="thin-rule text-[#f0ede6] mb-8 md:hidden" />
-              <p className="text-sm sm:text-base text-[#f0ede6]/45 leading-[1.8] font-light">
+              <p className="text-sm sm:text-base text-[#f0ede6]/50 leading-[1.8]">
                 {dict.home.mission.description}
               </p>
-              <LaceOrnament className="mt-10 opacity-40" />
+              <LaceOrnament color="#d4af7a" className="mt-10 opacity-30" />
             </div>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          SERVICES — parchment bg, three cards
+          SERVICES — warm parchment, three cards
           ═══════════════════════════════════════════ */}
       <section className="relative py-28 sm:py-40 px-6 bg-[#f0ede6]">
         <div className="max-w-[1100px] mx-auto">
@@ -138,7 +125,7 @@ export default async function HomePage({
             <h2 data-reveal="up" data-reveal-delay="0.1" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-light italic text-[#2d2926] tracking-tight mb-6">
               {dict.home.services.title}
             </h2>
-            <LaceOrnament color="#b85c3a" className="opacity-40" />
+            <LaceOrnament className="opacity-35" />
           </div>
 
           <div data-stagger="up" className="grid md:grid-cols-3 gap-0 border-t border-[#2d2926]/10">
@@ -147,11 +134,11 @@ export default async function HomePage({
                 key={svc.name}
                 className="group relative py-10 md:px-8 first:md:pl-0 last:md:pr-0 border-b md:border-b-0 md:border-r last:border-r-0 border-[#2d2926]/10 transition-all duration-500"
               >
-                <p className="label text-[#2d2926]/40 mb-4">{svc.level}</p>
+                <p className="label text-[#8a9e85] mb-4">{svc.level}</p>
                 <h3 className="font-[family-name:var(--font-display)] text-2xl font-normal text-[#2d2926] mb-3">
                   {svc.name}
                 </h3>
-                <p className="text-sm text-[#2d2926]/50 leading-relaxed font-light mb-6 max-w-[280px]">
+                <p className="text-sm text-[#2d2926]/50 leading-relaxed mb-6 max-w-[280px]">
                   {svc.description}
                 </p>
                 <Link
@@ -160,7 +147,6 @@ export default async function HomePage({
                 >
                   Learn more <span className="text-lg leading-none">&rarr;</span>
                 </Link>
-                {/* Hover left border accent */}
                 <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[#b85c3a] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top hidden md:block" />
               </div>
             ))}
@@ -169,12 +155,11 @@ export default async function HomePage({
       </section>
 
       {/* ═══════════════════════════════════════════
-          ABOUT — dark section, asymmetric layout
+          ABOUT — dark accent section, asymmetric
           ═══════════════════════════════════════════ */}
       <section className="relative py-28 sm:py-40 px-6 bg-[#2d2926] grain">
         <div className="max-w-[1100px] mx-auto">
           <div className="grid md:grid-cols-[1fr_1.2fr] gap-16 items-center">
-            {/* Text left */}
             <div>
               <p data-reveal="up" className="label text-[#d4af7a]/50 mb-6">
                 Our Story
@@ -182,18 +167,16 @@ export default async function HomePage({
               <h2 data-reveal="up" data-reveal-delay="0.1" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-light italic text-[#f0ede6] tracking-tight mb-8">
                 {dict.about.history.title}
               </h2>
-              <p data-reveal="up" data-reveal-delay="0.2" className="text-sm sm:text-base text-[#f0ede6]/45 leading-[1.8] font-light mb-8">
+              <p data-reveal="up" data-reveal-delay="0.2" className="text-sm sm:text-base text-[#f0ede6]/50 leading-[1.8] mb-8">
                 {dict.about.history.content}
               </p>
-              <LaceOrnament className="opacity-30 mb-6" />
+              <LaceOrnament color="#d4af7a" className="opacity-25 mb-6" />
               <p data-reveal="up" data-reveal-delay="0.3" className="label text-[#d4af7a]/30">
                 Est. 2024
               </p>
             </div>
-
-            {/* Image right — offset */}
             <div data-reveal="up" data-reveal-delay="0.2" className="relative md:translate-y-12">
-              <div className="aspect-[3/4] bg-[#1e1916] flex items-center justify-center overflow-hidden">
+              <div className="aspect-[3/4] bg-[#1e1916] overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80"
                   alt="Meditation and wellness"
@@ -206,9 +189,9 @@ export default async function HomePage({
       </section>
 
       {/* ═══════════════════════════════════════════
-          WHY SYRENA — parchment bg, philosophy cards
+          WHY SYRENA — soft warm background
           ═══════════════════════════════════════════ */}
-      <section className="relative py-28 sm:py-40 px-6 bg-[#f0ede6]">
+      <section className="relative py-28 sm:py-40 px-6 bg-[#e8e2d8]">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-20">
             <p data-reveal="up" className="label text-[#b85c3a]/70 mb-4">
@@ -217,19 +200,19 @@ export default async function HomePage({
             <h2 data-reveal="up" data-reveal-delay="0.1" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-light italic text-[#2d2926] tracking-tight mb-6">
               {dict.home.philosophy.title}
             </h2>
-            <LaceOrnament color="#b85c3a" className="mx-auto opacity-40" />
+            <LaceOrnament className="mx-auto opacity-35" />
           </div>
 
-          <div data-stagger="up" className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#2d2926]/8">
+          <div data-stagger="up" className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#2d2926]/6">
             {dict.home.philosophy.items.map((item: { title: string; description: string; icon: string }) => (
               <div
                 key={item.title}
-                className="bg-[#f0ede6] p-8 sm:p-10 group"
+                className="bg-[#e8e2d8] p-8 sm:p-10 group"
               >
                 <h3 className="font-[family-name:var(--font-display)] text-xl font-light italic text-[#2d2926] mb-3">
                   {item.title}
                 </h3>
-                <p className="text-xs text-[#2d2926]/40 leading-relaxed font-light">
+                <p className="text-xs text-[#2d2926]/45 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -239,12 +222,12 @@ export default async function HomePage({
       </section>
 
       {/* ═══════════════════════════════════════════
-          SCHEDULE — parchment bg, list layout
+          SCHEDULE — parchment, list layout
           ═══════════════════════════════════════════ */}
       <section className="relative py-28 sm:py-40 px-6 bg-[#f0ede6]">
         <div className="max-w-[900px] mx-auto">
           <div className="mb-16">
-            <p data-reveal="up" className="label text-[#b85c3a]/70 mb-4">
+            <p data-reveal="up" className="label text-[#8a9e85] mb-4">
               Weekly Rhythm
             </p>
             <h2 data-reveal="up" data-reveal-delay="0.1" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-light italic text-[#2d2926] tracking-tight">
@@ -280,9 +263,9 @@ export default async function HomePage({
       </section>
 
       {/* ═══════════════════════════════════════════
-          TESTIMONIALS — dark bg
+          TESTIMONIALS — dark accent
           ═══════════════════════════════════════════ */}
-      <section className="relative py-28 sm:py-40 px-6 bg-[#1e1916] grain">
+      <section className="relative py-28 sm:py-40 px-6 bg-[#2d2926] grain">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-20">
             <p data-reveal="up" className="label text-[#d4af7a]/50 mb-4">
@@ -291,14 +274,14 @@ export default async function HomePage({
             <h2 data-reveal="up" data-reveal-delay="0.1" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-light italic text-[#f0ede6] tracking-tight mb-6">
               {dict.home.testimonials.title}
             </h2>
-            <LaceOrnament className="mx-auto opacity-30" />
+            <LaceOrnament color="#d4af7a" className="mx-auto opacity-25" />
           </div>
 
           <div data-stagger="up" className="grid md:grid-cols-3 gap-px bg-[#f0ede6]/5">
             {dict.home.testimonials.items.map((t: { quote: string; name: string; location: string }) => (
               <div
                 key={t.name}
-                className="bg-[#1e1916] p-8 sm:p-10"
+                className="bg-[#2d2926] p-8 sm:p-10"
               >
                 <p className="font-[family-name:var(--font-display)] text-base sm:text-lg italic text-[#f0ede6]/60 leading-relaxed mb-8">
                   &ldquo;{t.quote}&rdquo;
@@ -314,25 +297,25 @@ export default async function HomePage({
       </section>
 
       {/* ═══════════════════════════════════════════
-          CTA — deep dark section with large serif
+          CTA — warm parchment, inviting
           ═══════════════════════════════════════════ */}
-      <section className="relative py-32 sm:py-44 px-6 bg-[#2d2926] grain">
+      <section className="relative py-32 sm:py-44 px-6 bg-[#e8e2d8]">
         <div className="max-w-[800px] mx-auto text-center">
           <LaceOrnament className="mx-auto mb-12 opacity-40" />
-          <h2 data-reveal="up" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-6xl font-light italic text-[#f0ede6] tracking-tight mb-8 leading-[1.15]">
+          <h2 data-reveal="up" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-6xl font-light italic text-[#2d2926] tracking-tight mb-8 leading-[1.15]">
             {dict.home.cta.title}
           </h2>
-          <p data-reveal="up" data-reveal-delay="0.2" className="text-base text-[#f0ede6]/40 mb-14 font-light leading-relaxed max-w-lg mx-auto">
+          <p data-reveal="up" data-reveal-delay="0.2" className="text-base text-[#2d2926]/45 mb-14 leading-relaxed max-w-lg mx-auto">
             {dict.home.cta.description}
           </p>
           <div data-reveal="scale" data-reveal-delay="0.4">
             <Link
               href={`/${lang}/contact`}
-              className="inline-block px-12 py-4 border border-[#b85c3a] text-[#b85c3a] label tracking-[0.12em] hover:bg-[#b85c3a] hover:text-[#f0ede6] transition-all duration-500"
+              className="inline-block px-12 py-4 bg-[#b85c3a] text-[#f0ede6] label tracking-[0.12em] hover:bg-[#2d2926] transition-all duration-500"
             >
               {dict.home.cta.button}
             </Link>
-            <p className="mt-8 label text-[#f0ede6]/20" style={{ fontSize: "0.6rem" }}>
+            <p className="mt-8 label text-[#2d2926]/25" style={{ fontSize: "0.6rem" }}>
               {dict.home.cta.note}
             </p>
           </div>
@@ -342,24 +325,20 @@ export default async function HomePage({
       {/* ═══════════════════════════════════════════
           FOOTER — dark, minimal
           ═══════════════════════════════════════════ */}
-      <footer className="relative py-16 px-6 bg-[#1e1916] grain">
+      <footer className="relative py-16 px-6 bg-[#2d2926] grain">
         <div className="max-w-[1100px] mx-auto">
-          <LaceOrnament className="mx-auto mb-12 opacity-20" />
+          <LaceOrnament color="#d4af7a" className="mx-auto mb-12 opacity-15" />
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
-            {/* Left — address & email */}
             <div>
               <p className="label text-[#f0ede6]/25 mb-3">Syrena Holistic</p>
-              <p className="text-sm text-[#f0ede6]/30 font-light leading-relaxed">
+              <p className="text-sm text-[#f0ede6]/30 leading-relaxed">
                 hello@syrenaholistic.com
               </p>
             </div>
-
-            {/* Right — sign-off phrase */}
             <p className="font-[family-name:var(--font-display)] text-xl sm:text-2xl italic text-[#f0ede6]/20 font-light">
               See beyond the ordinary.
             </p>
           </div>
-
           <div className="mt-12 pt-6 border-t border-[#f0ede6]/5">
             <p className="label text-[#f0ede6]/15" style={{ fontSize: "0.6rem" }}>
               &copy; {new Date().getFullYear()} Syrena Holistic. {dict.footer.rights}
