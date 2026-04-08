@@ -47,7 +47,7 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
         <Link
           href={`/${lang}`}
           className={`font-[family-name:var(--font-display)] text-lg font-light italic tracking-wide transition-colors duration-300 ${
-            isTransparent ? "text-[#f0ede6]/70" : "text-[#f0ede6]/80"
+            isTransparent ? "text-[#2d2926]/70" : "text-[#f0ede6]/80"
           }`}
         >
           {dict.metadata.title}
@@ -62,8 +62,8 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
               className={`label link-hover transition-colors duration-300 ${
                 isTransparent
                   ? pathname === link.href
-                    ? "text-[#d4af7a]"
-                    : "text-[#f0ede6]/40 hover:text-[#f0ede6]/80"
+                    ? "text-[#b85c3a]"
+                    : "text-[#2d2926]/40 hover:text-[#2d2926]/80"
                   : pathname === link.href
                     ? "text-[#d4af7a]"
                     : "text-[#f0ede6]/40 hover:text-[#f0ede6]/80"
@@ -95,7 +95,7 @@ export function Navbar({ dict, lang }: { dict: Dictionary; lang: Locale }) {
         {/* Mobile toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="sm:hidden p-2 text-[#f0ede6]/60"
+          className={`sm:hidden p-2 transition-colors duration-300 ${isTransparent ? "text-[#2d2926]/60" : "text-[#f0ede6]/60"}`}
           aria-label="Toggle menu"
         >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
