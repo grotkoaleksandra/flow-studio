@@ -4,6 +4,56 @@ import Link from "next/link";
 import { ScrollRevealInit } from "@/components/scroll-reveal";
 import { EyeAnimation } from "@/components/eye-animation";
 
+/* ── Lace ornament divider ── */
+function LaceDivider({ color = "#d4af7a", bg = "#2d2926", className = "" }: { color?: string; bg?: string; className?: string }) {
+  return (
+    <div className={`relative py-6 overflow-hidden ${className}`} style={{ background: bg }}>
+      <svg className="w-full h-12 sm:h-16" viewBox="0 0 1200 60" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Center diamond */}
+        <path d="M600 8 L612 30 L600 52 L588 30Z" stroke={color} strokeWidth="1" opacity="0.5" />
+        <path d="M600 16 L607 30 L600 44 L593 30Z" stroke={color} strokeWidth="0.5" opacity="0.3" />
+        <circle cx="600" cy="30" r="2" fill={color} opacity="0.5" />
+
+        {/* Left side lace pattern */}
+        {/* Inner arcs */}
+        <path d="M580 30 Q570 18 555 30 Q570 42 580 30" stroke={color} strokeWidth="0.8" opacity="0.35" />
+        <path d="M545 30 Q535 20 520 30 Q535 40 545 30" stroke={color} strokeWidth="0.8" opacity="0.3" />
+        <path d="M510 30 Q500 22 488 30 Q500 38 510 30" stroke={color} strokeWidth="0.7" opacity="0.25" />
+        <path d="M478 30 Q468 23 458 30 Q468 37 478 30" stroke={color} strokeWidth="0.7" opacity="0.2" />
+        {/* Dots along line */}
+        <circle cx="550" cy="30" r="1.5" fill={color} opacity="0.3" />
+        <circle cx="515" cy="30" r="1.2" fill={color} opacity="0.25" />
+        <circle cx="483" cy="30" r="1" fill={color} opacity="0.2" />
+        {/* Teardrop / leaf accents */}
+        <path d="M565 30 Q558 22 550 30" stroke={color} strokeWidth="0.6" opacity="0.25" />
+        <path d="M565 30 Q558 38 550 30" stroke={color} strokeWidth="0.6" opacity="0.25" />
+        <path d="M530 30 Q524 23 518 30" stroke={color} strokeWidth="0.6" opacity="0.2" />
+        <path d="M530 30 Q524 37 518 30" stroke={color} strokeWidth="0.6" opacity="0.2" />
+        {/* Extending lines */}
+        <line x1="448" y1="30" x2="380" y2="30" stroke={color} strokeWidth="0.5" opacity="0.15" />
+        <line x1="370" y1="30" x2="340" y2="30" stroke={color} strokeWidth="0.3" opacity="0.1" strokeDasharray="4 6" />
+        <circle cx="445" cy="30" r="0.8" fill={color} opacity="0.15" />
+
+        {/* Right side — mirror of left */}
+        <path d="M620 30 Q630 18 645 30 Q630 42 620 30" stroke={color} strokeWidth="0.8" opacity="0.35" />
+        <path d="M655 30 Q665 20 680 30 Q665 40 655 30" stroke={color} strokeWidth="0.8" opacity="0.3" />
+        <path d="M690 30 Q700 22 712 30 Q700 38 690 30" stroke={color} strokeWidth="0.7" opacity="0.25" />
+        <path d="M722 30 Q732 23 742 30 Q732 37 722 30" stroke={color} strokeWidth="0.7" opacity="0.2" />
+        <circle cx="650" cy="30" r="1.5" fill={color} opacity="0.3" />
+        <circle cx="685" cy="30" r="1.2" fill={color} opacity="0.25" />
+        <circle cx="717" cy="30" r="1" fill={color} opacity="0.2" />
+        <path d="M635 30 Q642 22 650 30" stroke={color} strokeWidth="0.6" opacity="0.25" />
+        <path d="M635 30 Q642 38 650 30" stroke={color} strokeWidth="0.6" opacity="0.25" />
+        <path d="M670 30 Q676 23 682 30" stroke={color} strokeWidth="0.6" opacity="0.2" />
+        <path d="M670 30 Q676 37 682 30" stroke={color} strokeWidth="0.6" opacity="0.2" />
+        <line x1="752" y1="30" x2="820" y2="30" stroke={color} strokeWidth="0.5" opacity="0.15" />
+        <line x1="830" y1="30" x2="860" y2="30" stroke={color} strokeWidth="0.3" opacity="0.1" strokeDasharray="4 6" />
+        <circle cx="755" cy="30" r="0.8" fill={color} opacity="0.15" />
+      </svg>
+    </div>
+  );
+}
+
 export default async function HomePage({
   params,
 }: {
@@ -54,6 +104,8 @@ export default async function HomePage({
         </div>
       </section>
 
+      <LaceDivider bg="#1e1916" />
+
       {/* ═══════════════════════════════════════════
           PHILOSOPHY — dark bg, pull quote + paragraph
           ═══════════════════════════════════════════ */}
@@ -80,6 +132,8 @@ export default async function HomePage({
           </div>
         </div>
       </section>
+
+      <LaceDivider color="#b85c3a" bg="#f0ede6" />
 
       {/* ═══════════════════════════════════════════
           SERVICES — parchment bg, three cards
@@ -122,6 +176,8 @@ export default async function HomePage({
         </div>
       </section>
 
+      <LaceDivider bg="#2d2926" />
+
       {/* ═══════════════════════════════════════════
           ABOUT — dark section, asymmetric layout
           ═══════════════════════════════════════════ */}
@@ -157,6 +213,8 @@ export default async function HomePage({
           </div>
         </div>
       </section>
+
+      <LaceDivider color="#b85c3a" bg="#f0ede6" />
 
       {/* ═══════════════════════════════════════════
           WHY SYRENA — parchment bg, philosophy cards
@@ -231,6 +289,8 @@ export default async function HomePage({
         </div>
       </section>
 
+      <LaceDivider bg="#1e1916" />
+
       {/* ═══════════════════════════════════════════
           TESTIMONIALS — dark bg
           ═══════════════════════════════════════════ */}
@@ -263,6 +323,8 @@ export default async function HomePage({
           </div>
         </div>
       </section>
+
+      <LaceDivider bg="#2d2926" />
 
       {/* ═══════════════════════════════════════════
           CTA — deep dark section with large serif
