@@ -67,9 +67,6 @@ export default async function HomePage({
       <section className="relative py-32 sm:py-44 px-6 bg-[#f0ede6]">
         <div className="max-w-[900px] mx-auto text-center">
           <LaceOrnament className="mx-auto mb-10 opacity-50" />
-          <p data-reveal="up" className="label text-[#b85c3a]/70 mb-8">
-            {dict.home.hero.scroll}
-          </p>
           <h1
             data-text-reveal=""
             className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-7xl font-light italic leading-[1.1] tracking-tight text-[#2d2926] whitespace-pre-line mb-10"
