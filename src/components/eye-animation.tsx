@@ -131,8 +131,8 @@ export function EyeAnimation() {
               className="w-[min(70vw,750px)] h-auto"
               style={{ overflow: "visible" }}
             >
-            {/* Flat starting line (outside clip group) */}
-            <line id="flat-line" x1="180" y1="545" x2="1310" y2="545" stroke="#2d2926" strokeWidth="10" strokeLinecap="round" />
+            {/* Flat starting line — hidden, kept for animation ref */}
+            <line id="flat-line" x1="180" y1="545" x2="1310" y2="545" stroke="#2d2926" strokeWidth="10" strokeLinecap="round" opacity="0" />
 
             <defs>
               <clipPath id="radial-reveal">
