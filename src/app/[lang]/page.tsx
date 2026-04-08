@@ -4,53 +4,47 @@ import Link from "next/link";
 import { ScrollRevealInit } from "@/components/scroll-reveal";
 import { EyeAnimation } from "@/components/eye-animation";
 
-/* ── Lace ornament divider ── */
-function LaceDivider({ color = "#d4af7a", bg = "#2d2926", className = "" }: { color?: string; bg?: string; className?: string }) {
+/* ── Lace ornament — intricate scrollwork accent ── */
+function LaceOrnament({ color = "#d4af7a", className = "" }: { color?: string; className?: string }) {
   return (
-    <div className={`relative py-6 overflow-hidden ${className}`} style={{ background: bg }}>
-      <svg className="w-full h-12 sm:h-16" viewBox="0 0 1200 60" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Center diamond */}
-        <path d="M600 8 L612 30 L600 52 L588 30Z" stroke={color} strokeWidth="1" opacity="0.5" />
-        <path d="M600 16 L607 30 L600 44 L593 30Z" stroke={color} strokeWidth="0.5" opacity="0.3" />
-        <circle cx="600" cy="30" r="2" fill={color} opacity="0.5" />
+    <svg className={`w-48 sm:w-64 h-auto ${className}`} viewBox="0 0 260 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Center lotus/flower */}
+      <path d="M130 10 Q135 20 130 32 Q125 20 130 10Z" fill={color} opacity="0.25" />
+      <path d="M130 10 Q140 18 140 28 Q135 22 130 32 Q133 18 130 10Z" fill={color} opacity="0.15" />
+      <path d="M130 10 Q120 18 120 28 Q125 22 130 32 Q127 18 130 10Z" fill={color} opacity="0.15" />
+      <path d="M130 32 Q137 28 143 32 Q137 36 130 32Z" fill={color} opacity="0.2" />
+      <path d="M130 32 Q123 28 117 32 Q123 36 130 32Z" fill={color} opacity="0.2" />
+      <circle cx="130" cy="22" r="1.5" fill={color} opacity="0.35" />
 
-        {/* Left side lace pattern */}
-        {/* Inner arcs */}
-        <path d="M580 30 Q570 18 555 30 Q570 42 580 30" stroke={color} strokeWidth="0.8" opacity="0.35" />
-        <path d="M545 30 Q535 20 520 30 Q535 40 545 30" stroke={color} strokeWidth="0.8" opacity="0.3" />
-        <path d="M510 30 Q500 22 488 30 Q500 38 510 30" stroke={color} strokeWidth="0.7" opacity="0.25" />
-        <path d="M478 30 Q468 23 458 30 Q468 37 478 30" stroke={color} strokeWidth="0.7" opacity="0.2" />
-        {/* Dots along line */}
-        <circle cx="550" cy="30" r="1.5" fill={color} opacity="0.3" />
-        <circle cx="515" cy="30" r="1.2" fill={color} opacity="0.25" />
-        <circle cx="483" cy="30" r="1" fill={color} opacity="0.2" />
-        {/* Teardrop / leaf accents */}
-        <path d="M565 30 Q558 22 550 30" stroke={color} strokeWidth="0.6" opacity="0.25" />
-        <path d="M565 30 Q558 38 550 30" stroke={color} strokeWidth="0.6" opacity="0.25" />
-        <path d="M530 30 Q524 23 518 30" stroke={color} strokeWidth="0.6" opacity="0.2" />
-        <path d="M530 30 Q524 37 518 30" stroke={color} strokeWidth="0.6" opacity="0.2" />
-        {/* Extending lines */}
-        <line x1="448" y1="30" x2="380" y2="30" stroke={color} strokeWidth="0.5" opacity="0.15" />
-        <line x1="370" y1="30" x2="340" y2="30" stroke={color} strokeWidth="0.3" opacity="0.1" strokeDasharray="4 6" />
-        <circle cx="445" cy="30" r="0.8" fill={color} opacity="0.15" />
+      {/* Left scrollwork */}
+      <path d="M115 25 C108 15, 95 12, 88 20 C82 27, 88 34, 95 30" stroke={color} strokeWidth="0.7" opacity="0.3" fill="none" />
+      <path d="M95 30 C100 27, 98 22, 92 24" stroke={color} strokeWidth="0.5" opacity="0.2" fill="none" />
+      <path d="M88 20 C82 14, 70 14, 65 22 C60 30, 68 34, 74 28" stroke={color} strokeWidth="0.6" opacity="0.2" fill="none" />
+      <path d="M74 28 C78 25, 76 20, 70 23" stroke={color} strokeWidth="0.4" opacity="0.15" fill="none" />
+      {/* Leaf accents */}
+      <path d="M100 22 Q95 18 90 22 Q95 26 100 22Z" fill={color} opacity="0.12" />
+      <path d="M78 22 Q73 19 68 22 Q73 25 78 22Z" fill={color} opacity="0.08" />
+      {/* Dots */}
+      <circle cx="105" cy="28" r="1" fill={color} opacity="0.2" />
+      <circle cx="82" cy="26" r="0.8" fill={color} opacity="0.15" />
+      {/* Trailing vine */}
+      <path d="M65 22 C58 18, 48 22, 42 20" stroke={color} strokeWidth="0.4" opacity="0.12" fill="none" />
+      <path d="M42 20 C36 18, 28 22, 22 21" stroke={color} strokeWidth="0.3" opacity="0.08" fill="none" strokeDasharray="3 4" />
+      <circle cx="60" cy="21" r="0.6" fill={color} opacity="0.1" />
 
-        {/* Right side — mirror of left */}
-        <path d="M620 30 Q630 18 645 30 Q630 42 620 30" stroke={color} strokeWidth="0.8" opacity="0.35" />
-        <path d="M655 30 Q665 20 680 30 Q665 40 655 30" stroke={color} strokeWidth="0.8" opacity="0.3" />
-        <path d="M690 30 Q700 22 712 30 Q700 38 690 30" stroke={color} strokeWidth="0.7" opacity="0.25" />
-        <path d="M722 30 Q732 23 742 30 Q732 37 722 30" stroke={color} strokeWidth="0.7" opacity="0.2" />
-        <circle cx="650" cy="30" r="1.5" fill={color} opacity="0.3" />
-        <circle cx="685" cy="30" r="1.2" fill={color} opacity="0.25" />
-        <circle cx="717" cy="30" r="1" fill={color} opacity="0.2" />
-        <path d="M635 30 Q642 22 650 30" stroke={color} strokeWidth="0.6" opacity="0.25" />
-        <path d="M635 30 Q642 38 650 30" stroke={color} strokeWidth="0.6" opacity="0.25" />
-        <path d="M670 30 Q676 23 682 30" stroke={color} strokeWidth="0.6" opacity="0.2" />
-        <path d="M670 30 Q676 37 682 30" stroke={color} strokeWidth="0.6" opacity="0.2" />
-        <line x1="752" y1="30" x2="820" y2="30" stroke={color} strokeWidth="0.5" opacity="0.15" />
-        <line x1="830" y1="30" x2="860" y2="30" stroke={color} strokeWidth="0.3" opacity="0.1" strokeDasharray="4 6" />
-        <circle cx="755" cy="30" r="0.8" fill={color} opacity="0.15" />
-      </svg>
-    </div>
+      {/* Right scrollwork — mirror */}
+      <path d="M145 25 C152 15, 165 12, 172 20 C178 27, 172 34, 165 30" stroke={color} strokeWidth="0.7" opacity="0.3" fill="none" />
+      <path d="M165 30 C160 27, 162 22, 168 24" stroke={color} strokeWidth="0.5" opacity="0.2" fill="none" />
+      <path d="M172 20 C178 14, 190 14, 195 22 C200 30, 192 34, 186 28" stroke={color} strokeWidth="0.6" opacity="0.2" fill="none" />
+      <path d="M186 28 C182 25, 184 20, 190 23" stroke={color} strokeWidth="0.4" opacity="0.15" fill="none" />
+      <path d="M160 22 Q165 18 170 22 Q165 26 160 22Z" fill={color} opacity="0.12" />
+      <path d="M182 22 Q187 19 192 22 Q187 25 182 22Z" fill={color} opacity="0.08" />
+      <circle cx="155" cy="28" r="1" fill={color} opacity="0.2" />
+      <circle cx="178" cy="26" r="0.8" fill={color} opacity="0.15" />
+      <path d="M195 22 C202 18, 212 22, 218 20" stroke={color} strokeWidth="0.4" opacity="0.12" fill="none" />
+      <path d="M218 20 C224 18, 232 22, 238 21" stroke={color} strokeWidth="0.3" opacity="0.08" fill="none" strokeDasharray="3 4" />
+      <circle cx="200" cy="21" r="0.6" fill={color} opacity="0.1" />
+    </svg>
   );
 }
 
@@ -77,10 +71,10 @@ export default async function HomePage({
 
       {/* ═══════════════════════════════════════════
           BRAND INTRO — first content after eye unlocks
-          Dark section with large italic serif
           ═══════════════════════════════════════════ */}
       <section className="relative py-32 sm:py-44 px-6 bg-[#2d2926] grain">
         <div className="max-w-[900px] mx-auto text-center">
+          <LaceOrnament className="mx-auto mb-10 opacity-60" />
           <p data-reveal="up" className="label text-[#d4af7a]/60 mb-8">
             {dict.home.hero.scroll}
           </p>
@@ -104,8 +98,6 @@ export default async function HomePage({
         </div>
       </section>
 
-      <LaceDivider bg="#1e1916" />
-
       {/* ═══════════════════════════════════════════
           PHILOSOPHY — dark bg, pull quote + paragraph
           ═══════════════════════════════════════════ */}
@@ -128,12 +120,11 @@ export default async function HomePage({
               <p className="text-sm sm:text-base text-[#f0ede6]/45 leading-[1.8] font-light">
                 {dict.home.mission.description}
               </p>
+              <LaceOrnament className="mt-10 opacity-40" />
             </div>
           </div>
         </div>
       </section>
-
-      <LaceDivider color="#b85c3a" bg="#f0ede6" />
 
       {/* ═══════════════════════════════════════════
           SERVICES — parchment bg, three cards
@@ -144,16 +135,17 @@ export default async function HomePage({
             <p data-reveal="up" className="label text-[#b85c3a]/70 mb-4">
               {dict.home.services.tagline}
             </p>
-            <h2 data-reveal="up" data-reveal-delay="0.1" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-light italic text-[#2d2926] tracking-tight">
+            <h2 data-reveal="up" data-reveal-delay="0.1" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-light italic text-[#2d2926] tracking-tight mb-6">
               {dict.home.services.title}
             </h2>
+            <LaceOrnament color="#b85c3a" className="opacity-40" />
           </div>
 
           <div data-stagger="up" className="grid md:grid-cols-3 gap-0 border-t border-[#2d2926]/10">
             {dict.home.services.items.slice(0, 3).map((svc: { name: string; description: string; duration: string; level: string }) => (
               <div
                 key={svc.name}
-                className="group py-10 md:px-8 first:md:pl-0 last:md:pr-0 border-b md:border-b-0 md:border-r last:border-r-0 border-[#2d2926]/10 transition-all duration-500"
+                className="group relative py-10 md:px-8 first:md:pl-0 last:md:pr-0 border-b md:border-b-0 md:border-r last:border-r-0 border-[#2d2926]/10 transition-all duration-500"
               >
                 <p className="label text-[#2d2926]/40 mb-4">{svc.level}</p>
                 <h3 className="font-[family-name:var(--font-display)] text-2xl font-normal text-[#2d2926] mb-3">
@@ -176,8 +168,6 @@ export default async function HomePage({
         </div>
       </section>
 
-      <LaceDivider bg="#2d2926" />
-
       {/* ═══════════════════════════════════════════
           ABOUT — dark section, asymmetric layout
           ═══════════════════════════════════════════ */}
@@ -195,12 +185,13 @@ export default async function HomePage({
               <p data-reveal="up" data-reveal-delay="0.2" className="text-sm sm:text-base text-[#f0ede6]/45 leading-[1.8] font-light mb-8">
                 {dict.about.history.content}
               </p>
+              <LaceOrnament className="opacity-30 mb-6" />
               <p data-reveal="up" data-reveal-delay="0.3" className="label text-[#d4af7a]/30">
                 Est. 2024
               </p>
             </div>
 
-            {/* Image placeholder right — offset */}
+            {/* Image right — offset */}
             <div data-reveal="up" data-reveal-delay="0.2" className="relative md:translate-y-12">
               <div className="aspect-[3/4] bg-[#1e1916] flex items-center justify-center overflow-hidden">
                 <img
@@ -214,8 +205,6 @@ export default async function HomePage({
         </div>
       </section>
 
-      <LaceDivider color="#b85c3a" bg="#f0ede6" />
-
       {/* ═══════════════════════════════════════════
           WHY SYRENA — parchment bg, philosophy cards
           ═══════════════════════════════════════════ */}
@@ -225,9 +214,10 @@ export default async function HomePage({
             <p data-reveal="up" className="label text-[#b85c3a]/70 mb-4">
               {dict.home.philosophy.tagline}
             </p>
-            <h2 data-reveal="up" data-reveal-delay="0.1" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-light italic text-[#2d2926] tracking-tight">
+            <h2 data-reveal="up" data-reveal-delay="0.1" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-light italic text-[#2d2926] tracking-tight mb-6">
               {dict.home.philosophy.title}
             </h2>
+            <LaceOrnament color="#b85c3a" className="mx-auto opacity-40" />
           </div>
 
           <div data-stagger="up" className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#2d2926]/8">
@@ -289,8 +279,6 @@ export default async function HomePage({
         </div>
       </section>
 
-      <LaceDivider bg="#1e1916" />
-
       {/* ═══════════════════════════════════════════
           TESTIMONIALS — dark bg
           ═══════════════════════════════════════════ */}
@@ -300,9 +288,10 @@ export default async function HomePage({
             <p data-reveal="up" className="label text-[#d4af7a]/50 mb-4">
               {dict.home.testimonials.tagline}
             </p>
-            <h2 data-reveal="up" data-reveal-delay="0.1" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-light italic text-[#f0ede6] tracking-tight">
+            <h2 data-reveal="up" data-reveal-delay="0.1" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-light italic text-[#f0ede6] tracking-tight mb-6">
               {dict.home.testimonials.title}
             </h2>
+            <LaceOrnament className="mx-auto opacity-30" />
           </div>
 
           <div data-stagger="up" className="grid md:grid-cols-3 gap-px bg-[#f0ede6]/5">
@@ -324,14 +313,12 @@ export default async function HomePage({
         </div>
       </section>
 
-      <LaceDivider bg="#2d2926" />
-
       {/* ═══════════════════════════════════════════
           CTA — deep dark section with large serif
           ═══════════════════════════════════════════ */}
       <section className="relative py-32 sm:py-44 px-6 bg-[#2d2926] grain">
         <div className="max-w-[800px] mx-auto text-center">
-          <hr data-reveal="up" className="thin-rule text-[#f0ede6] max-w-[60px] mx-auto mb-12" />
+          <LaceOrnament className="mx-auto mb-12 opacity-40" />
           <h2 data-reveal="up" className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-6xl font-light italic text-[#f0ede6] tracking-tight mb-8 leading-[1.15]">
             {dict.home.cta.title}
           </h2>
@@ -357,7 +344,7 @@ export default async function HomePage({
           ═══════════════════════════════════════════ */}
       <footer className="relative py-16 px-6 bg-[#1e1916] grain">
         <div className="max-w-[1100px] mx-auto">
-          <hr className="thin-rule text-[#f0ede6] mb-12" />
+          <LaceOrnament className="mx-auto mb-12 opacity-20" />
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
             {/* Left — address & email */}
             <div>
