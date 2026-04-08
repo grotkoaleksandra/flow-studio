@@ -125,28 +125,41 @@ export default async function HomePage({
             <LaceOrnament className="opacity-35" />
           </div>
 
-          <div data-stagger="up" className="grid md:grid-cols-3 gap-0 border-t border-[#2d2926]/10">
-            {dict.home.services.items.slice(0, 3).map((svc: { name: string; description: string; duration: string; level: string }) => (
-              <div
-                key={svc.name}
-                className="group relative py-10 md:px-8 first:md:pl-0 last:md:pr-0 border-b md:border-b-0 md:border-r last:border-r-0 border-[#2d2926]/10 transition-all duration-500"
-              >
-                <p className="label text-[#8a9e85] mb-4">{svc.level}</p>
-                <h3 className="font-[family-name:var(--font-display)] text-2xl font-normal text-[#2d2926] mb-3">
-                  {svc.name}
-                </h3>
-                <p className="text-sm text-[#2d2926]/50 leading-relaxed mb-6 max-w-[280px]">
-                  {svc.description}
-                </p>
-                <Link
-                  href={`/${lang}/programs`}
-                  className="inline-flex items-center gap-2 text-[#b85c3a] label link-hover transition-colors duration-300 group-hover:text-[#2d2926]"
+          <div data-stagger="up" className="grid md:grid-cols-3 gap-8">
+            {dict.home.services.items.slice(0, 3).map((svc: { name: string; description: string; duration: string; level: string }, i: number) => {
+              const images = [
+                "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80",
+                "https://images.unsplash.com/photo-1600298882525-1ac025c98b68?auto=format&fit=crop&w=600&q=80",
+                "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80",
+              ];
+              return (
+                <div
+                  key={svc.name}
+                  className="group relative transition-all duration-500"
                 >
-                  Learn more <span className="text-lg leading-none">&rarr;</span>
-                </Link>
-                <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[#b85c3a] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top hidden md:block" />
-              </div>
-            ))}
+                  <div className="aspect-[4/3] bg-[#2d2926]/5 mb-6 overflow-hidden">
+                    <img
+                      src={images[i]}
+                      alt={svc.name}
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                    />
+                  </div>
+                  <p className="label text-[#8a9e85] mb-3">{svc.level}</p>
+                  <h3 className="font-[family-name:var(--font-display)] text-2xl font-normal text-[#2d2926] mb-3">
+                    {svc.name}
+                  </h3>
+                  <p className="text-sm text-[#2d2926]/50 leading-relaxed mb-6">
+                    {svc.description}
+                  </p>
+                  <Link
+                    href={`/${lang}/programs`}
+                    className="inline-flex items-center gap-2 text-[#b85c3a] label link-hover transition-colors duration-300 group-hover:text-[#2d2926]"
+                  >
+                    Learn more <span className="text-lg leading-none">&rarr;</span>
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
